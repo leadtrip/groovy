@@ -1,0 +1,172 @@
+Intro
+Application was converted from a Grails 2 to a Grails 3 app in July 2016.
+This was no small undertaking, a number of differences are documented here (http://docs.grails.org/3.0.x/guide/upgrading.html) but this doc barely scratches the surface.
+The reason for the change was, 1 to stay current, Grails 2 was no longer supported and 2 to take advantage of the new architecture, Grails 3 is built on Spring boot so we get Actuator out of the box, and Grails 3 uses the Gradle build system so we can take advantage of being able to use e.g. jacoco for analysis.
+
+IDE
+Intellij IDEA is the only fully featured IDE to support Grails 3 at present.
+Once your version of Grails 3 has been downloaded, install IDEA then create a Grails application.
+You then need to copy the existing sources from the version 2 app to version 3
+
+cd D:\WS\GRAILS\3.1.8
+grails create-app myAppG3
+robocopy /e D:\WS\GRAILS\2.4.4\myApp\src\groovy D:\WS\GRAILS\3.1.8\myAppG3\src\main\groovy
+robocopy /e D:\WS\GRAILS\2.4.4\myApp\src\java D:\WS\GRAILS\3.1.8\myAppG3\src\main\groovy
+robocopy /e D:\WS\GRAILS\2.4.4\myApp\grails-app D:\WS\GRAILS\3.1.8\myAppG3\grails-app
+robocopy /e D:\WS\GRAILS\2.4.4\myApp\test\unit D:\WS\GRAILS\3.1.8\myAppG3\src\test\groovy
+robocopy /e D:\WS\GRAILS\2.4.4\myApp\test\integration D:\WS\GRAILS\3.1.8\myAppG3\src\integration-test\groovy
+The following sections describe the changes made to various parts of the application
+
+Changes
+
+All
+References to org.codehaus.* have been replaced, this differed depending on the import, lots of differences in test packages, a handful in main codebase
+
+Spring security
+There's largely no change here apart from some naming convention changes to some of the parameters which affect e.g. custom login pages.
+myApp uses a custom login page named \views\login\auth.gsp
+The name of the username and password parameters had to be changed from j_username to username and j_password to password
+
+Controllers
+Seem to HAVE to return something now from controller methods, whereas in 2.4.4 I could e.g. just set something in the flash if there were no database results,
+in 3.1.8 the screen is totally blank.
+Any random statement seems to work e.g. return, println 'hello' new ModelAndView(), [:]
+
+MyService
+Dependency to GroovyMBean was broken when code 1st imported, turns out the version of groovy pulled in by IDEA wasn't the *-all version so was missing JMX
+related stuff, fixed issue by adding compile "org.codehaus.groovy:groovy-jmx:2.4.7" to build.gradle
+
+AsyncService
+Asynchronous plugin not available for Grails 3, replaced the following:
+runAsync {
+try {
+    params.taskId = task.id
+    log.warn "Started task ${task.id} for service $serviceName method $serviceMethod params $params"
+    Holders.getApplicationContext().getBean( serviceName )."${serviceMethod}"( params )
+}
+catch ( any ) {
+    taskService.addMessage( task.id, any.message, MessageType.ERROR )
+}
+finally {
+    log.warn "Task ${task.id} completed"
+    taskService.endTask( task.id )
+}
+}
+with:
+Promise p = task {
+    params.taskId = shTask.id
+    log.warn "Started task ${shTask.id} for service $serviceName method $serviceMethod params $params"
+    Holders.getApplicationContext().getBean( serviceName )."${serviceMethod}"( params )
+}
+p.onError { Throwable err ->
+    err.printStackTrace()
+    taskService.addMessage( shTask.id, err.message, MessageType.ERROR )
+}
+p.onComplete {
+    log.warn "Task ${shTask.id} completed"
+    taskService.endTask( shTask.id )
+}
+Now making use of grails.async.* code.
+
+Data binding in async code
+Quite a few strange issues around data binding of Grails domain objects using map constructors in asynchronous code.
+A number of the async tasks involve parsing a csv file then creating a domain object from it, this was done using the domain objects map constructor.
+For some (still unknown) reason this would fail after a random number of object creations, generally the fields would all end up assigned null values and the domain validation would fail on the call to save( failOnError: true ).
+Also tried making relevant classes implement the Trait grails.web.databinding.DataBinder then call method bindData( object, map ) but this didn't work either.
+Had to change to direct setting of each value on the object which is clearly not as efficient from a coding POV, needs more investigation.
+
+resources.groovy
+
+2.4.4 version contained following
+multipartResolver( org.springframework.web.multipart.commons.CommonsMultipartResolver ) {
+    maxInMemorySize=1000000000
+    maxUploadSize=10000000000
+}
+This prevented file uploads from working, the file object was not present in the request at all.
+Turns out CommonsMultipartResolver has been replaced by another implementation and the following replaces functionality in application.yml
+grails:
+    upload:
+        maxRequestSize: 1000000000
+        maxFileSize: 1000000000
+
+======================================================
+There's another method of accessing the grails application object in resources.groovy:
+"${grailsApplication.config.grails.plugin.springsecurity.ldap.search.base}"
+although the previous method still works:
+application.config.grails.plugin.springsecurity.ldap.search.base
+application.groovy
+static rules for spring security controller annotations syntax needed changing from:
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+    '/': ['permitAll'],
+    '/index': ['permitAll'],
+]
+To:
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+    [pattern: '/myApp', access: ['permitAll']],
+    [pattern: '/', access: ['permitAll']]
+]
+
+Twitter bootstrap
+Changed method of pulling in bootstrap, in 2.4.4. a plugin was used, in 3.1.8 it's pulled in using webjars e.g. from build.gradle
+compile "org.webjars:bootstrap:3.3.5"
+
+Missing dependency
+Grails code wouldn't compile due to missing dependency on org.apache.commons.fileupload.FileItemFactory, resolved by adding the following to build.gradle
+compile "commons-fileupload:commons-fileupload:1.3.2"
+This was odd as dependency appears in build.gradle for the project
+
+Database update migration
+To prevent Grails from trying to create/update... the database you no longer specify the dbCreate option at all, if it's there and empty Grails still tries to do something, just don't specify anything at all.
+To allow Grails to see the database migration files add the following to build.gradle
+sourceSets {
+    main {
+        resources {
+            srcDir 'grails-app/migrations'
+            }
+        }
+    }
+
+External libraries
+No lib directory is created in the root of the project anymore, created a directory named extLibs in root and added following to build.gradle:
+dependencies {
+...
+compile fileTree( dir: 'extlibs', include: '*.jar' )
+...
+}
+
+Integration tests
+IntegrationSpec class no longer exists, now make integration tests extend Specification as per unit tests and add @Integration annotation to class from grails.test.mixin.integration package
+Can no longer add to the database in setup method due to transaction not being available, see http://docs.grails.org/latest/guide/testing.html#integrationTesting, you'll get a No Hibernate Session found error if you try
+database migration plugin
+In 2.4.4 config you'd specify a list of filenames to use for startup under the key updateOnStartFileNames, this has changed to a single property named updateOnStartFileName
+static resources
+Resources e.g. javascript that are only required for individual areas are now accessed through the asset pipeline syntax {{<asset:javascript src="customer.js" />}}, the resource itself goes in grails-app/assets/javascripts
+
+Information messages
+Information messages are fetched from a mongoDB and placed at top of screen, this stopped working, no errors, had to change the following in InfoMessageController
+render ( view: 'messages', model:[infoMessageList: msgs] )
+To
+render ( template: 'messages', model:[infoMessageList: msgs] )
+And rename messages.gsp to _messages.gsp
+
+Deploy
+Eventually decided to upgrade to Tomcat 8 after various issues when building the war file.
+Initially tried to deploy to Tomcat 7 as previous but the was was bundled with a bunch of embedded Tomcat 8 jars which caused a problem when starting Tomcat 7.
+You can stop the jars from being bundled in the war's /WEB-INF/lib directory by changing the dependency in build.gradle from
+compile "org.springframework.boot:spring-boot-starter-tomcat"
+to
+provided "org.springframework.boot:spring-boot-starter-tomcat"
+All this does however is put the jars in /WEB-INF/lib-provided, then Tomcat 7 gets so far during startup and complains that it's missing a class that is in the core embedded tomcat jar.
+So installed tomcat 8 like so:
+sudo cp apache-tomcat-8.0.36.tar.gz /usr/local
+add gzip to /usr/local
+sudo tar xvzf apache-tomcat-8.0.36.tar.gz
+unpack gzip
+sudo rm apache-tomcat-8.0.36.tar.gz
+remove gzip
+sudo chown -hR myApp:myApp /usr/local/apache-tomcat-8.0.36
+change file owner/group to myApp
+vi ~/.bashrc
+change export CATALINA_HOME=/usr/local/apache-tomcat-7.0.56 to export CATALINA_HOME=/usr/local/apache-tomcat-8.0.36
+vi /usr/local/apache-tomcat-8.0.36/bin/setenv.sh
+create this file then add memory settings e.g. export JAVA_OPTS="-Xms1024m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m"
