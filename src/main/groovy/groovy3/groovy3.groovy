@@ -1,6 +1,6 @@
-package groovy3
+// Groovy 3 features
 
-import groovy.transform.Canonical
+import groovy.transform.ToString
 
 import java.util.Map.Entry
 import java.util.stream.Collectors
@@ -105,10 +105,14 @@ assert hexer(127) == '7f'
 def r = Random::new
 assert r().nextInt(10) in 0..9
 
-@Canonical
+@ToString(includePackage = false)
 class Planet {
     String name
     Long kmsFromSun
+
+    Planet(String n) {
+        name = n
+    }
 
     Planet(Entry<String, Long> e) {
         name = e.key
@@ -116,8 +120,34 @@ class Planet {
     }
 }
 
+// method reference on non-default constructor
 def furthestFromTheSun = solarSystemPlanets.entrySet().stream()
         .map( Planet::new )
         .max( Comparator.comparing(p -> p.kmsFromSun ) )
 
-println furthestFromTheSun
+println "Planet furthest from the sun is ${furthestFromTheSun.get().name}"
+
+// Elvis assignment operator
+def newPlanet = new Planet('Domestos')
+newPlanet.with {
+    kmsFromSun ?= 1000_0000_0000_0000       // this is shortened from: kmsFromSun = kmsFromSum ?: 1000_0000_0000_0000
+}
+assert newPlanet.toString() == 'Planet(Domestos, 1000000000000000)'
+
+// Safe indexing
+String[] array = ['a', 'b']
+assert 'b' == array?[1]      // get using normal array index
+array?[1] = 'c'              // set using normal array index
+assert 'c' == array?[1]
+
+array = null
+assert null == array?[1]     // return null for all index values
+array?[1] = 'c'              // quietly ignore attempt to set value
+assert null == array?[1]
+
+// var is supported
+def a = 1
+var b = 2
+assert 3 == a+b
+
+// default methods on interfaces are supported
