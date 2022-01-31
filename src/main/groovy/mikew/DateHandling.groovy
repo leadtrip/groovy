@@ -1,3 +1,5 @@
+package mikew
+
 import groovy.time.TimeCategory
 
 println new Date().format( "yyyy-MM-dd'T'HH:mm:ss'Z'" )

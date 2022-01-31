@@ -1,3 +1,5 @@
+package mikew
+
 def str = '''this is a start <g:message code="deployment.order.label" default="Definition order" />
 dddfg fgfr
 ${message(code: "no.using.xx.label", default: 'Start')}"

@@ -1,4 +1,4 @@
-package mike.wood
+package mikew
 // https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc
 @Grapes(
         @Grab(group='com.microsoft.sqlserver', module='mssql-jdbc', version='6.1.5.jre8-preview')

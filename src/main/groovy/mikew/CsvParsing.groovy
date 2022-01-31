@@ -1,3 +1,5 @@
+package mikew
+
 @Grab('com.xlson.groovycsv:groovycsv:1.1')
 import static com.xlson.groovycsv.CsvParser.parseCsv
 

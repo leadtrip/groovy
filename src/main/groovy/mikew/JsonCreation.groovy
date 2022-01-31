@@ -1,3 +1,5 @@
+package mikew
+
 import groovy.json.JsonOutput
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper

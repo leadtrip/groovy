@@ -1,9 +1,11 @@
+package mikew
+
 import groovy.transform.ToString
 
 import java.time.LocalDate
 
 @ToString
-class Person {
+class Human {
     String forename
     String surname
     LocalDate dob
@@ -17,7 +19,7 @@ class Person {
     }
 }
 
-def me = new Person()
+def me = new Human()
 me.forename = 'Mike'
 me.setSurname( 'Wood' )
 me['dob'] = LocalDate.of(1975, 4, 10)

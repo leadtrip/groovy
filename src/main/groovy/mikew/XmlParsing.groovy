@@ -1,3 +1,7 @@
+package mikew
+
+import groovy.xml.XmlSlurper
+
 // Options of parsing an XML structure
 
 XmlSlurper xmlSlurper = new XmlSlurper()

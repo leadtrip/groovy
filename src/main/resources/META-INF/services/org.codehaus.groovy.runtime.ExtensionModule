@@ -1,0 +1,3 @@
+moduleName=runtime-metaProgramming
+moduleVersion=1.0
+extensionClasses=mikew.meta.MikeGroovyExtension

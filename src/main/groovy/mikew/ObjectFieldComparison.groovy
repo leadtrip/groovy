@@ -1,8 +1,10 @@
+package mikew
+
 class Contract {
     String number
     String signDate
     Address address
-    Person[] persons
+    ContractPerson[] persons
 }
 
 class Address {
@@ -12,7 +14,7 @@ class Address {
     String zip
 }
 
-class Person {
+class ContractPerson {
     String name
 }
 
@@ -25,7 +27,7 @@ def contract1 = new Contract(
                 city: "Frankfurt",
                 zip: "60486"
         ),
-        persons: [new Person(name: "Christian"), new Person(name: "Dave")]
+        persons: [new ContractPerson(name: "Christian"), new ContractPerson(name: "Dave")]
 )
 
 
@@ -39,7 +41,7 @@ def contract2 = new Contract(
                 city: "Frankfurt",
                 zip: "60483"
         ),
-        persons: [new Person(name: "Frank"), new Person(name: 'Bill'), new Person(name: 'Jonty')]
+        persons: [new ContractPerson(name: "Frank"), new ContractPerson(name: 'Bill'), new ContractPerson(name: 'Jonty')]
 )
 
 compareFields( contract1, contract2 )

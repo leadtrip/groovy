@@ -1,4 +1,7 @@
+package mikew
+
 import groovy.xml.MarkupBuilder
+import groovy.xml.XmlSlurper
 import groovy.xml.XmlUtil
 
 def writer = new StringWriter()
