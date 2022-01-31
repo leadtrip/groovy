@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE ITSO_POST_to_HOPS_File [
+        <!ELEMENT ITSO_POST_to_HOPS_File (ITSO_Message_Header , ITSO_Message_Frame)>
+        <!ELEMENT ITSO_Message_Header (ITSO_Message_Version , ITSO_Message_Class)>
+        <!ELEMENT ITSO_Message_Frame (ITSO_Batch_Header , ITSO_Message_Body)>
+        <!ELEMENT ITSO_Batch_Header (ITSO_Message_CRC , ITSO_Originator , ITSO_Recipient , ITSO_IBatch_Header?)>
+        <!ELEMENT ITSO_Message_Body (ITSO_Data_Frame | ITSO_Secure_Data_Frame)+>
+        <!ELEMENT ITSO_Data_Frame (ITSO_Message_Code , ITSO_DTS , ITSO_Data_Block , ITSO_DF_Trailer)>
+        <!ELEMENT ITSO_Data_Block (ITSO_DB_Len , ITSO_Num_Data_Elements , ITSO_Dest_Count , ITSO_Destination+ , ITSO_Data)>
+        <!ELEMENT ITSO_DF_Trailer (ITSO_Trailer_Length , ITSO_KID , ITSO_SealerID , ITSO_Seq_Num , ITSO_Seal)>
+        <!ELEMENT ITSO_Data (#PCDATA)>
+        <!ELEMENT ITSO_DB_Len (#PCDATA)>
+        <!ELEMENT ITSO_Dest_Count (#PCDATA)>
+        <!ELEMENT ITSO_Destination (#PCDATA)>
+        <!ELEMENT ITSO_DTS (#PCDATA)>
+        <!ELEMENT ITSO_IBatch_Header (#PCDATA)>
+        <!ELEMENT ITSO_KID (#PCDATA)>
+        <!ELEMENT ITSO_Message_Class (#PCDATA)>
+        <!ELEMENT ITSO_Message_Code (#PCDATA)>
+        <!ELEMENT ITSO_Message_CRC (#PCDATA)>
+        <!ELEMENT ITSO_Message_Version (#PCDATA)>
+        <!ELEMENT ITSO_Num_Data_Elements (#PCDATA)>
+        <!ELEMENT ITSO_Originator (#PCDATA)>
+        <!ELEMENT ITSO_Recipient (#PCDATA)>
+        <!ELEMENT ITSO_SDF (#PCDATA)>
+        <!ELEMENT ITSO_Seal (#PCDATA)>
+        <!ELEMENT ITSO_SealerID (#PCDATA)>
+        <!ELEMENT ITSO_Secure_Data_Frame (ITSO_SDF_XML | ITSO_SDF)>
+        <!ELEMENT ITSO_Seq_Num (#PCDATA)>
+        <!ELEMENT ITSO_Trailer_Length (#PCDATA)>
+        ]>
+<ITSO_POST_to_HOPS_File>
+    <ITSO_Message_Header>
+        <ITSO_Message_Version>2</ITSO_Message_Version>
+        <ITSO_Message_Class>1</ITSO_Message_Class>
+    </ITSO_Message_Header>
+    <ITSO_Message_Frame>
+        <ITSO_Batch_Header>
+            <ITSO_Message_CRC>FF4E</ITSO_Message_CRC>
+            <ITSO_Originator>63359707E80018</ITSO_Originator>
+            <ITSO_Recipient>63359707E80000</ITSO_Recipient>
+            <ITSO_IBatch_Header>07E800180000DA028E50028EC2000000D8CC0000000000002A0000000EB1132FF707F320A2A58DD936028F88</ITSO_IBatch_Header>
+        </ITSO_Batch_Header>
+        <ITSO_Message_Body>
+            <ITSO_Data_Frame>
+                <ITSO_Message_Code>0400</ITSO_Message_Code>
+                <ITSO_DTS>A31E97</ITSO_DTS>
+                <ITSO_Data_Block>
+                    <ITSO_DB_Len>0042</ITSO_DB_Len>
+                    <ITSO_Num_Data_Elements>10</ITSO_Num_Data_Elements>
+                    <ITSO_Dest_Count>02</ITSO_Dest_Count>
+                    <ITSO_Destination>63359707E80000</ITSO_Destination>
+                    <ITSO_Destination>633597FA000000</ITSO_Destination>
+                    <ITSO_Data>02,A31E97,00,00000000,00,07,04,01,6335971F400200,00,0A,0000,00,FA003CDB,003337,C111EC783E4F3083EEB2DD3C2850B494</ITSO_Data>
+                </ITSO_Data_Block>
+                <ITSO_DF_Trailer>
+                    <ITSO_Trailer_Length>14</ITSO_Trailer_Length>
+                    <ITSO_KID>20</ITSO_KID>
+                    <ITSO_SealerID>63359707E80018</ITSO_SealerID>
+                    <ITSO_Seq_Num>028EBF</ITSO_Seq_Num>
+                    <ITSO_Seal>5FCE3F98D87401E9</ITSO_Seal>
+                </ITSO_DF_Trailer>
+            </ITSO_Data_Frame>
+            <ITSO_Data_Frame>
+                <ITSO_Message_Code>0207</ITSO_Message_Code>
+                <ITSO_DTS>A31E97</ITSO_DTS>
+                <ITSO_Data_Block>
+                    <ITSO_DB_Len>009A</ITSO_DB_Len>
+                    <ITSO_Num_Data_Elements>3D</ITSO_Num_Data_Elements>
+                    <ITSO_Dest_Count>02</ITSO_Dest_Count>
+                    <ITSO_Destination>63359707E80000</ITSO_Destination>
+                    <ITSO_Destination>63359704000000</ITSO_Destination>
+                    <ITSO_Data>04,A31E97,00,00000000,00,07,04,01,6335970080160E,00,16,00000000,00,00000000,08,01,00000063359701284224332300000000,2089,08,18,02,00,00FD,00FD,FE40,02,1CFF,068F,00,02,00,A31E97,00,FF,01,00,00,00,00000744,00,0000,3A9F,07,08,30,0A,00,0000,A31E97,00000000,00,00,00,0000,0000,000000,00,00,04008AD6,000CAD,F80A66626B361CFC33166026A666C54F</ITSO_Data>
+                </ITSO_Data_Block>
+                <ITSO_DF_Trailer>
+                    <ITSO_Trailer_Length>14</ITSO_Trailer_Length>
+                    <ITSO_KID>20</ITSO_KID>
+                    <ITSO_SealerID>63359707E80018</ITSO_SealerID>
+                    <ITSO_Seq_Num>028EC0</ITSO_Seq_Num>
+                    <ITSO_Seal>E7E7969F21DF2564</ITSO_Seal>
+                </ITSO_DF_Trailer>
+            </ITSO_Data_Frame>
+            <ITSO_Data_Frame>
+                <ITSO_Message_Code>0208</ITSO_Message_Code>
+                <ITSO_DTS>A31E97</ITSO_DTS>
+                <ITSO_Data_Block>
+                    <ITSO_DB_Len>009A</ITSO_DB_Len>
+                    <ITSO_Num_Data_Elements>3D</ITSO_Num_Data_Elements>
+                    <ITSO_Dest_Count>02</ITSO_Dest_Count>
+                    <ITSO_Destination>63359707E80000</ITSO_Destination>
+                    <ITSO_Destination>63359704000000</ITSO_Destination>
+                    <ITSO_Data>04,A31E97,00,00000000,00,07,04,01,6335970080160E,00,16,00000000,00,00000000,08,01,00000000000000000000000000000000,2089,08,18,02,00,00FD,00FD,FE40,02,1CFF,068F,00,02,00,A31E97,00,FF,01,00,00,00,00000744,00,0000,3A9F,07,08,30,0A,00,0001,A31E97,07E80018,00,01,02,2089,1CFE,000000,00,00,04008AD6,000CAD,D6F2555595961CD71E78B530B993BF98</ITSO_Data>
+                </ITSO_Data_Block>
+                <ITSO_DF_Trailer>
+                    <ITSO_Trailer_Length>14</ITSO_Trailer_Length>
+                    <ITSO_KID>20</ITSO_KID>
+                    <ITSO_SealerID>63359707E80018</ITSO_SealerID>
+                    <ITSO_Seq_Num>028EC1</ITSO_Seq_Num>
+                    <ITSO_Seal>AB78E3487A43F97E</ITSO_Seal>
+                </ITSO_DF_Trailer>
+            </ITSO_Data_Frame>
+            <ITSO_Data_Frame>
+                <ITSO_Message_Code>0005</ITSO_Message_Code>
+                <ITSO_DTS>A31E97</ITSO_DTS>
+                <ITSO_Data_Block>
+                    <ITSO_DB_Len>0070</ITSO_DB_Len>
+                    <ITSO_Num_Data_Elements>14</ITSO_Num_Data_Elements>
+                    <ITSO_Dest_Count>01</ITSO_Dest_Count>
+                    <ITSO_Destination>63359704000000</ITSO_Destination>
+                    <ITSO_Data>02,A31E97,00,00000000,00,07,04,01,6335970080160E,00,04,32,00217D004080000202C31BB60202C61CFD0202CEA089000000000000000000000000000000089BE2E0028F39000890000007,02,00,00FD,00,04008AD6,000CAD,679353B2A9C7EFEBD4BEFE9652C270E6</ITSO_Data>
+                </ITSO_Data_Block>
+                <ITSO_DF_Trailer>
+                    <ITSO_Trailer_Length>14</ITSO_Trailer_Length>
+                    <ITSO_KID>20</ITSO_KID>
+                    <ITSO_SealerID>63359707E80018</ITSO_SealerID>
+                    <ITSO_Seq_Num>028EC2</ITSO_Seq_Num>
+                    <ITSO_Seal>E8FE3B592337F8D0</ITSO_Seal>
+                </ITSO_DF_Trailer>
+            </ITSO_Data_Frame>
+        </ITSO_Message_Body>
+    </ITSO_Message_Frame>
+</ITSO_POST_to_HOPS_File>
