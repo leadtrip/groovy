@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/day7input.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
       <recent name="C:\Users\woodm3\IdeaProjects\groovy\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.MetaTesting">
+  <component name="RunManager" selected="Groovy.aoc2021day7part1">
     <configuration name="MetaClosure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mikew.meta.MetaClosure" />
       <module name="groovy" />
@@ -108,17 +108,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonCreation" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/JsonCreation.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MetaTesting" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" />
@@ -130,23 +119,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy3" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="aoc2021day5part1" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/groovy3/groovy3.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/05/aoc2021day5part1.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/groovy3" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/05" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy4" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="aoc2021day6part1" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/groovy4/groovy4.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/06/aoc2021day6part1.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/groovy4" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/06" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aoc2021day7part1" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/07/aoc2021day7part1.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/07" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Groovy.aoc2021day7part1" />
+        <item itemvalue="Groovy.aoc2021day6part1" />
+        <item itemvalue="Groovy.aoc2021day5part1" />
         <item itemvalue="Groovy.MetaTesting" />
         <item itemvalue="Application.MetaClosure" />
-        <item itemvalue="Groovy.groovy3" />
-        <item itemvalue="Groovy.groovy4" />
-        <item itemvalue="Groovy.JsonCreation" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +193,7 @@
       <workItem from="1643100488307" duration="4438000" />
       <workItem from="1643280589999" duration="11430000" />
       <workItem from="1643381967424" duration="614000" />
-      <workItem from="1643521574262" duration="13523000" />
+      <workItem from="1643521574262" duration="13721000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643613296920</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Playing">
+      <created>1643613455449</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1643613455449</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
