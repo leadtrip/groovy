@@ -47,9 +47,7 @@ println theSun.isHot()      // this is fine, isHot added to theSun instance
 // the first argument to the method is the target class of the call, in this case that's the only argument,
 // any arguments after this are the arguments to the method if that method accepted arguments
 
-def zone = TrainingZone.ONE
-println zone.getZoneRpe()
-zone = TrainingZone.THREE
-println zone.getZoneRpe()
-zone = TrainingZone.SEVEN
-println zone.getZoneRpe()
+
+assert 'Easy' == TrainingZone.ONE.getZoneRpe()
+assert 'Steady' == TrainingZone.THREE.getZoneRpe()
+assert 'Hard' == TrainingZone.SEVEN.getZoneRpe()

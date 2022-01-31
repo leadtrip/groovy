@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dataframelogstats.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day7input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day10input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day1input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day2input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day3input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day4input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day5input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day6input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day7input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day8input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/adventofcode/2021/resources/day9input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/day7input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mikew/files/books.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mikew/files/message.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +193,7 @@
       <workItem from="1643100488307" duration="4438000" />
       <workItem from="1643280589999" duration="11430000" />
       <workItem from="1643381967424" duration="614000" />
-      <workItem from="1643521574262" duration="13267000" />
+      <workItem from="1643521574262" duration="13523000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -246,7 +230,28 @@
       <option name="project" value="LOCAL" />
       <updated>1643612669172</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Playing">
+      <created>1643613201897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643613201897</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Playing">
+      <created>1643613236791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643613236791</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Playing">
+      <created>1643613296920</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643613296920</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
