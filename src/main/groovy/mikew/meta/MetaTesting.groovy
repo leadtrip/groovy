@@ -20,7 +20,55 @@ assert !homeMadeExpando.cheesy()
 
 //------------------------------------------------------------------------------------
 
-// we add an isCheese method to the String class
+// we can do the same thing as above by accessing the metaClass on a class
+// in this case we're only adding a methodMissing method, no xxxProperty methods
+class Whatever{}
+
+Whatever.metaClass.methodMissing = { String m, args ->
+    println "Whatever methodMissing called for $m with $args"
+}
+
+// now we can call a method with any name on Whatever class
+w = new Whatever()
+w.sit()
+w.crawl(3)
+w.takeOff()
+w.eat('burgers', 'chips', 'beans')
+// w.bone this will fail becasue we haven't implemented setProperty
+
+//------------------------------------------------------------------------------------
+
+// an optimized version of methodMissing that defines the stuff to be done in a closure then adds the closure to the
+// metaClass, this means only the first call to a method not defined on the class at compile time will hit methodMissing
+// all subsequent calls will be found on the metaclass meaning one less step to look for a method
+
+// pattern used here is intercept, cache, invoke
+class WhateverOptimized{}
+
+WhateverOptimized.metaClass.methodMissing = { String m, args ->
+
+    println "WhateverOptimized methodMissing for $m with $args"
+
+    c = {
+        m.length()
+    }
+
+    WhateverOptimized.metaClass."$m" = c
+    c()
+}
+
+wo = new WhateverOptimized()
+wo.moonBoots()
+wo.moonBoots()
+wo.moonBoots()
+wo.captanCaveman()
+wo.captanCaveman()
+wo.captanCaveman()
+
+
+//------------------------------------------------------------------------------------
+
+// here we add an isCheese method to the String class
 String.metaClass.isCheese = {
         println "is cheese"
 }
