@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillage.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ToiletRoll.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ToiletRollTransformation.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/groovy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groovy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/BikeBuilder.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/BuildABike.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/DslBike.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/Dsl.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/PiplelineBuilder.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/GroovyCompileTimeAnnotations.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillage.groovy" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="metxg1wy" />
@@ -88,36 +95,54 @@
       <recent name="C:\Users\woodm3\IdeaProjects\groovy\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.AstTransformationsTesting">
-    <configuration name="MetaClosure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mikew.meta.MetaClosure" />
-      <module name="groovy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mikew.meta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Groovy.BasicGroovy">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AstTransformationsTesting" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="Anything" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicGroovy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuildABike" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/BuildABike.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroovyCompileTimeAnnotations" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/GroovyCompileTimeAnnotations.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast" />
@@ -126,57 +151,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MetaTesting" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="PiplelineBuilder" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/PiplelineBuilder.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline" />
       <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="aoc2021day7part1" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/07/aoc2021day7part1.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/07" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnythingSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mikew.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mikew" />
-      <option name="MAIN_CLASS_NAME" value="mikew.AnythingSpec" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Groovy.MetaTesting" />
-      <item itemvalue="Groovy.aoc2021day7part1" />
-      <item itemvalue="JUnit.AnythingSpec" />
-      <item itemvalue="Groovy.AstTransformationsTesting" />
-      <item itemvalue="Application.MetaClosure" />
+      <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
+      <item itemvalue="Groovy.Anything" />
+      <item itemvalue="Groovy.BuildABike" />
+      <item itemvalue="Groovy.PiplelineBuilder" />
+      <item itemvalue="Groovy.BasicGroovy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Groovy.AstTransformationsTesting" />
-        <item itemvalue="Application.MetaClosure" />
-        <item itemvalue="Groovy.MetaTesting" />
-        <item itemvalue="JUnit.AnythingSpec" />
-        <item itemvalue="Groovy.aoc2021day7part1" />
+        <item itemvalue="Groovy.BasicGroovy" />
+        <item itemvalue="Groovy.BuildABike" />
+        <item itemvalue="Groovy.PiplelineBuilder" />
+        <item itemvalue="Groovy.Anything" />
+        <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +210,12 @@
       <workItem from="1643100488307" duration="4438000" />
       <workItem from="1643280589999" duration="11430000" />
       <workItem from="1643381967424" duration="614000" />
-      <workItem from="1643521574262" duration="26821000" />
+      <workItem from="1643521574262" duration="34002000" />
+      <workItem from="1643811511572" duration="883000" />
+      <workItem from="1643898551902" duration="1299000" />
+      <workItem from="1643988453133" duration="6706000" />
+      <workItem from="1644071605315" duration="60000" />
+      <workItem from="1644072394812" duration="9786000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -283,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643613651662</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Playing">
+      <created>1643711867661</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643711867661</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

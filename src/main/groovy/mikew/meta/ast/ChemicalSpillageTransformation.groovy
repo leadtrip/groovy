@@ -12,6 +12,9 @@ import org.codehaus.groovy.transform.GroovyASTTransformation
 
 import java.lang.reflect.Modifier
 
+/**
+ * Here we're using the DSL to build the method to add to the annotated class
+ */
 @GroovyASTTransformation
 class ChemicalSpillageTransformation implements ASTTransformation {
 
@@ -34,7 +37,7 @@ class ChemicalSpillageTransformation implements ASTTransformation {
         classNode.addMethod( nodes[0] )
     }
 
-    boolean isDeadly( AnnotationNode annoNode ) {
+    static boolean isDeadly(AnnotationNode annoNode ) {
         def isDeadly = annoNode.getMember( 'isDeadly' )
         isDeadly instanceof ConstantExpression && ((ConstantExpression)isDeadly).getValue()
     }

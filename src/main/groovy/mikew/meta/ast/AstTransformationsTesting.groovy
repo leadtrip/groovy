@@ -1,5 +1,7 @@
 package mikew.meta.ast
 
+// NOTE REBUILD MODULE IF YOU GET MESSAGE ABOUT BEING UNABLE TO FIND THE **Transformation classes
+
 // class ToiletRollTransformation adds getStatus method to classes annotated with @ToiletRoll
 p = new Paper()
 assert p.getStatus() == 'spinning'
@@ -10,8 +12,8 @@ class Paper {}
 // --------------------------------------------------------------------------------------
 
 // class ChemicalSpillageTransformation adds the getCasualtiesExpected method to classes annotated with @ChemicalSpillage
-def r = new River()
-assert r.getCasualtiesExpected()
+def p = new Puddle()
+assert p.getCasualtiesExpected()
 
 assert !new Brook().getCasualtiesExpected()
 
@@ -19,7 +21,7 @@ def c = new Canal()
 assert !c.getCasualtiesExpected()
 
 @ChemicalSpillage(isDeadly = true)
-class River{}
+class Puddle{}
 
 @ChemicalSpillage(isDeadly = false)
 class Brook{}
