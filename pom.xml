@@ -27,7 +27,12 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
-    <!--<dependencies>
+<!--    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>3.0.9</version>
+        </dependency>
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>

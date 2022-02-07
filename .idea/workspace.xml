@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/BikeBuilder.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/BuildABike.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/DslBike.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/Dsl.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/PiplelineBuilder.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/GroovyCompileTimeAnnotations.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/groovy/mikew/AnythingSpec.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +69,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5117801" />
     <property name="settings.editor.selected.configurable" value="build.tools" />
@@ -95,7 +88,7 @@
       <recent name="C:\Users\woodm3\IdeaProjects\groovy\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.BasicGroovy">
+  <component name="RunManager" selected="Groovy.BuildABike">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -140,17 +133,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroovyCompileTimeAnnotations" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/GroovyCompileTimeAnnotations.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/ast" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PiplelineBuilder" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/PiplelineBuilder.groovy" />
@@ -162,20 +144,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AnythingSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groovy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mikew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mikew" />
+      <option name="MAIN_CLASS_NAME" value="mikew.AnythingSpec" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="single test" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+                <option value="-Dtest=AnythingSpec" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
       <item itemvalue="Groovy.Anything" />
       <item itemvalue="Groovy.BuildABike" />
       <item itemvalue="Groovy.PiplelineBuilder" />
       <item itemvalue="Groovy.BasicGroovy" />
+      <item itemvalue="Maven.single test" />
+      <item itemvalue="JUnit.AnythingSpec" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Groovy.BasicGroovy" />
         <item itemvalue="Groovy.BuildABike" />
-        <item itemvalue="Groovy.PiplelineBuilder" />
+        <item itemvalue="JUnit.AnythingSpec" />
         <item itemvalue="Groovy.Anything" />
-        <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
+        <item itemvalue="Groovy.BasicGroovy" />
+        <item itemvalue="Groovy.PiplelineBuilder" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +239,7 @@
       <workItem from="1643898551902" duration="1299000" />
       <workItem from="1643988453133" duration="6706000" />
       <workItem from="1644071605315" duration="60000" />
-      <workItem from="1644072394812" duration="9786000" />
+      <workItem from="1644072394812" duration="12437000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -294,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643711867661</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Playing">
+      <created>1644159536501</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1644159536501</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

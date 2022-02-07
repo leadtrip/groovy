@@ -95,3 +95,8 @@ Status.values().each {
     else
         println "Bad status $it"
 }
+
+// elvis
+def b = 'value1'
+def c = 'value2'
+def result = (a ? b : c)
