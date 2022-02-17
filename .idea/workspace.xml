@@ -5,10 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/test/groovy/mikew/AnythingSpec.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/QueueStack.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Recursion.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/CategoryTesting.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ExpandoTesting.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/01/aoc2021day1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/02/aoc2021day2part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/02/aoc2021day2part2.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/03/aoc2021day3part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/03/aoc2021day3part2.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/04/aoc2021day4.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/05/aoc2021day5part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/05/aoc2021day5part2.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/06/aoc2021day6part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/06/aoc2021day6part2.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/07/aoc2021day7part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/07/aoc2021day7part2.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/08/aoc2021day8part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/09/aoc2021day9part1.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/09/aoc2021day9part2.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/10/aoc2021day10.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day10input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day1input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day2input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day3input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day4input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day5input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day6input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day7input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day8input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/adventofcode/2021/resources/day9input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/groovy3/groovy3.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy3/groovy3.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/groovy4/groovy4.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/groovy4.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/BasicGroovy.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/CsvParsing.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/CsvParsing.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/DateHandling.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/DateHandling.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/GroovyProperties.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/GroovyProperties.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/JsonCreation.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/JsonCreation.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/JsonParsing.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/JsonParsing.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/ObjectFieldComparison.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/ObjectFieldComparison.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/Regex.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Regex.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/SQLServerTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/SQLServerTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/XmlCreating.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/XmlCreating.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/XmlParsing.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/XmlParsing.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/dataframelogstats.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/dataframelogstats.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +130,9 @@
       <recent name="C:\Users\woodm3\IdeaProjects\groovy\mikew" />
       <recent name="C:\Users\woodm3\IdeaProjects\groovy\src" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="anything" />
+    </key>
   </component>
   <component name="RunManager" selected="Groovy.BuildABike">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -96,28 +142,6 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Anything" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/Anything.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BasicGroovy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/BasicGroovy.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew" />
-      <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,28 +157,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PiplelineBuilder" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="ObjectFieldComparison" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline/PiplelineBuilder.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/ObjectFieldComparison.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/pipeline" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnythingSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueueStack (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mikew.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mikew" />
-      <option name="MAIN_CLASS_NAME" value="mikew.AnythingSpec" />
-      <option name="TEST_OBJECT" value="class" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/QueueStack.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Recursion" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/Recursion.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XmlParsing" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/XmlParsing.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
+      <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,20 +228,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Groovy.Anything" />
-      <item itemvalue="Groovy.BuildABike" />
-      <item itemvalue="Groovy.PiplelineBuilder" />
-      <item itemvalue="Groovy.BasicGroovy" />
       <item itemvalue="Maven.single test" />
-      <item itemvalue="JUnit.AnythingSpec" />
+      <item itemvalue="Groovy.Recursion" />
+      <item itemvalue="Groovy.QueueStack (1)" />
+      <item itemvalue="Groovy.XmlParsing" />
+      <item itemvalue="Groovy.ObjectFieldComparison" />
+      <item itemvalue="Groovy.BuildABike" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Groovy.BuildABike" />
-        <item itemvalue="JUnit.AnythingSpec" />
-        <item itemvalue="Groovy.Anything" />
-        <item itemvalue="Groovy.BasicGroovy" />
-        <item itemvalue="Groovy.PiplelineBuilder" />
+        <item itemvalue="Groovy.ObjectFieldComparison" />
+        <item itemvalue="Groovy.XmlParsing" />
+        <item itemvalue="Groovy.QueueStack (1)" />
+        <item itemvalue="Groovy.Recursion" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +281,11 @@
       <workItem from="1643898551902" duration="1299000" />
       <workItem from="1643988453133" duration="6706000" />
       <workItem from="1644071605315" duration="60000" />
-      <workItem from="1644072394812" duration="12437000" />
+      <workItem from="1644072394812" duration="13645000" />
+      <workItem from="1644572629407" duration="1764000" />
+      <workItem from="1644830011048" duration="642000" />
+      <workItem from="1644995970518" duration="5911000" />
+      <workItem from="1645019010895" duration="6454000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -325,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644159536501</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Playing">
+      <created>1644242254041</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1644242254041</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,12 +413,12 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/09/aoc2021day9part1.groovy</url>
+          <url>file://$PROJECT_DIR$/src/main/groovy/mikew/2021/09/aoc2021day9part1.groovy</url>
           <line>5</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/groovy/adventofcode/2021/10/aoc2021day10.groovy</url>
+          <url>file://$PROJECT_DIR$/src/main/groovy/mikew/2021/10/aoc2021day10.groovy</url>
           <line>16</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>

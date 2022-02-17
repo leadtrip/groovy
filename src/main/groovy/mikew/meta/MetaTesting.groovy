@@ -1,27 +1,16 @@
 package mikew.meta
 
-def TWO = 2
-def YES = 'yes'
+/** All groovy classes implement GroovyObject which provides default implementations of:
+        invokeMethod
+        getProperty
+        setProperty
+    You also access a class's metaClass through GroovyObject
+ **/
 
-// as we've implemented setProperty, getProperty and methodMissing on the HomeMadeExpando we can set and get properties
-// and in this case call closures on the class at runtime
-def homeMadeExpando = new HomeMadeExpando()
-homeMadeExpando.helicopters = TWO
-homeMadeExpando.chickenWire = YES
-homeMadeExpando.double = { it * 2 }
-
-assert homeMadeExpando.helicopters == TWO
-assert homeMadeExpando.chickenWire == YES
-assert homeMadeExpando.double(TWO) == TWO * TWO
-assert homeMadeExpando.double('naughty') == 'naughtynaughty'
-
-assert !homeMadeExpando.cheesy()
-
-
-//------------------------------------------------------------------------------------
-
-// we can do the same thing as above by accessing the metaClass on a class
-// in this case we're only adding a methodMissing method, no xxxProperty methods
+/**
+    Following are example of adding properties to classes on the fly through its metaClass
+    In this first case we're only adding a methodMissing method, no xxxProperty methods
+ **/
 class Whatever{}
 
 Whatever.metaClass.methodMissing = { String m, args ->
@@ -59,15 +48,16 @@ WhateverOptimized.metaClass.methodMissing = { String m, args ->
 
 wo = new WhateverOptimized()
 wo.moonBoots()
+wo.moonBoots()      // moonBoots was added to the meta class in previous call so can be called directly, no need to fall through to methodMissing
 wo.moonBoots()
-wo.moonBoots()
-wo.captanCaveman()
-wo.captanCaveman()
-wo.captanCaveman()
+wo.captainCaveman()
+wo.captainCaveman()  // as above comment for moonBoots
+wo.captainCaveman()
 
 
 //------------------------------------------------------------------------------------
 
+// java classes don't implement GroovyObject but we can still access their metaClass through the MetaClass registry in same manner
 // here we add an isCheese method to the String class
 String.metaClass.isCheese = {
         println "is cheese"
