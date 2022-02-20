@@ -1,4 +1,4 @@
-package mikew.meta
+package mikew.meta.runtime
 
 enum TrainingZone {
     ONE('Active recovery', (0..55)),

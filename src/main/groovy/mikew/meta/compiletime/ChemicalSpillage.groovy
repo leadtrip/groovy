@@ -1,4 +1,4 @@
-package mikew.meta.ast
+package mikew.meta.compiletime
 
 import org.codehaus.groovy.transform.GroovyASTTransformationClass
 
@@ -9,7 +9,7 @@ import java.lang.annotation.Target
 
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)
-@GroovyASTTransformationClass( 'mikew.meta.ast.ChemicalSpillageTransformation' )
+@GroovyASTTransformationClass( 'mikew.meta.ast.compiletime.ChemicalSpillageTransformation' )
 @interface ChemicalSpillage {
 
     boolean isDeadly() default false;

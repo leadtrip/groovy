@@ -1,9 +1,8 @@
 package mikew.anything
 
-@Grab('com.xlson.groovycsv:groovycsv:1.1')
-import static com.xlson.groovycsv.CsvParser.parseCsv
-
 import groovy.sql.Sql
+
+import static com.xlson.groovycsv.CsvParser.parseCsv
 
 def csv = '''city,address1,address2
 London,14,hammersmith

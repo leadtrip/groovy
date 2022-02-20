@@ -1,4 +1,4 @@
-package mikew.meta.ast
+package mikew.meta.compiletime
 
 import org.codehaus.groovy.transform.GroovyASTTransformationClass
 
@@ -9,6 +9,6 @@ import java.lang.annotation.Target
 
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)
-@GroovyASTTransformationClass( 'mikew.meta.ast.ToiletRollTransformation' )
+@GroovyASTTransformationClass( 'mikew.meta.ast.compiletime.ToiletRollTransformation' )
 @interface ToiletRoll {
 }

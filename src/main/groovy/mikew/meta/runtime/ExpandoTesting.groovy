@@ -1,4 +1,6 @@
-package mikew.meta
+package mikew.meta.runtime
+
+import groovy.transform.ToString
 
 /**
  * An Expando is a dynamic representation of a typical Groovy bean.
@@ -65,3 +67,44 @@ assert homeMadeExpando.double(TWO) == TWO * TWO
 assert homeMadeExpando.double('naughty') == 'naughtynaughty'
 
 assert !homeMadeExpando.cheesy()
+
+// -------------------------------------------------------------------------------------------
+// Dynamic method naming
+@ToString(includePackage = false)
+class Computer {
+    String manufacturer
+    String model
+    Integer cpuSpeedMhz
+    Integer totalRamMb
+    Integer hardDriveSizeGb
+    Boolean isOverclocked
+}
+
+def comp = new Computer()
+comp.properties.keySet().findAll{ !(it =~ /lass/)}.each {
+
+        Computer.metaClass."idFor${it.capitalize()}" = { -> delegate
+            delegate."$it".toString().toLowerCase().tr(' ', '_')
+        }
+
+        Computer.metaClass."upgrade${it.capitalize()}" = { -> delegate
+            delegate."$it" *= 10
+        }
+}
+
+def comp1 = new Computer( manufacturer: 'Dell',
+                          model: 'SUPER MEGA 8000+',
+                          cpuSpeedMhz: 3700,
+                          totalRamMb: 32000,
+                          hardDriveSizeGb: 1000000,
+                          isOverclocked: false )
+
+assert comp1.idForManufacturer() == 'dell'
+assert comp1.idForModel() == 'super_mega_8000+'
+println comp1.idForTotalRamMb()
+
+assert comp1.cpuSpeedMhz * 10 == comp1.upgradeCpuSpeedMhz()
+assert comp1.totalRamMb * 10 == comp1.upgradeTotalRamMb()
+assert comp1.hardDriveSizeGb * 10 == comp1.upgradeHardDriveSizeGb()
+
+println comp1

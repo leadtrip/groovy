@@ -1,4 +1,4 @@
-package mikew.meta
+package mikew.meta.runtime
 
 class MikeGroovyExtension {
 
