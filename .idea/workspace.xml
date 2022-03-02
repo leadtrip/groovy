@@ -5,34 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_10_2_0_jre17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_opencsv_opencsv_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_xlson_groovycsv_groovycsv_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/GroovyStrings.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/groovy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groovy.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/gormlike/Isam.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/CsvParsing.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/CsvParsing.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/SQLServerTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/SQLServerTest.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/CategoryTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/CategoryTesting.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ExpandoTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/ExpandoTesting.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/HomeMadeExpando.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/HomeMadeExpando.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaClosure.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaClosure.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaTesting.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/MikeGroovyExtension.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MikeGroovyExtension.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/TrainingZones.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/TrainingZones.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/AstTransformationsTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/compiletime/AstTransformationsTesting.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillage.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/compiletime/ChemicalSpillage.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ChemicalSpillageTransformation.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/compiletime/ChemicalSpillageTransformation.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/GroovyCompileTimeAnnotations.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/compiletime/GroovyCompileTimeAnnotations.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ToiletRoll.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/compiletime/ToiletRoll.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/ast/ToiletRollTransformation.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/compiletime/ToiletRollTransformation.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaTesting.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,16 +90,14 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.GroovyCompileTimeAnnotations">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Groovy.MetaTesting">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ObjectFieldComparison" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="MetaTesting" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/ObjectFieldComparison.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaTesting.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,20 +184,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Groovy.ObjectFieldComparison" />
       <item itemvalue="Groovy.BuildABike" />
-      <item itemvalue="Maven.single test" />
       <item itemvalue="Groovy.ExpandoTesting" />
       <item itemvalue="Groovy.GroovyStrings" />
       <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
+      <item itemvalue="Groovy.MetaTesting" />
+      <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Groovy.MetaTesting" />
         <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
         <item itemvalue="Groovy.ExpandoTesting" />
         <item itemvalue="Groovy.GroovyStrings" />
         <item itemvalue="Groovy.BuildABike" />
-        <item itemvalue="Groovy.ObjectFieldComparison" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +242,8 @@
       <workItem from="1644830011048" duration="642000" />
       <workItem from="1644995970518" duration="5911000" />
       <workItem from="1645019010895" duration="6696000" />
-      <workItem from="1645174978137" duration="13622000" />
+      <workItem from="1645174978137" duration="17761000" />
+      <workItem from="1646208065034" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -369,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645084115813</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Playing">
+      <created>1645366760317</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1645366760317</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

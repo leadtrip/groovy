@@ -89,3 +89,46 @@ println theSun.isHot()      // this is fine, isHot added to theSun instance
 assert 'Easy' == TrainingZone.ONE.getZoneRpe()
 assert 'Steady' == TrainingZone.THREE.getZoneRpe()
 assert 'Hard' == TrainingZone.SEVEN.getZoneRpe()
+
+
+//----------------------------------------------------------------------------------------
+class Owl{
+
+    String name
+
+    def twitTwoo() {
+        println 'twit twoo'
+    }
+
+    /**
+     * Invoked when the method called is not present on a Groovy object
+     */
+    def invokeMethod(String name, Object args) {
+        println 'erm...'
+    }
+
+    /**
+     * Every read access to a property can be intercepted by overriding the getProperty()
+     */
+    def getProperty(String propName) {
+        if( propName == 'name' )
+            name + " the owl"
+        else
+            'shrugging'
+    }
+
+    /**
+     * You can intercept write access to properties by overriding the setProperty() method
+     */
+    void setProperty(String propName, Object value) {
+        println "I don't like the name $name but $value is worse, ignoring"
+    }
+}
+
+def owl = new Owl( name: 'Sid' )
+owl.twitTwoo()
+owl.bark()
+println owl.name
+println owl.height
+owl.name = 'Charlie'
+assert owl.name == 'Sid the owl'
