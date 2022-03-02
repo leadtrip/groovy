@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/gormlike/Isam.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaTesting.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/meta/runtime/MetaTesting.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/JsonParsing.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/JsonParsing.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,25 +89,16 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.MetaTesting">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Groovy.JsonParsing">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BuildABike" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike/BuildABike.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/dsl/bike" />
-      <setting name="debug" value="false" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,6 +128,17 @@
     <configuration name="GroovyStrings" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/GroovyStrings.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonParsing" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/JsonParsing.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
@@ -184,20 +185,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Groovy.BuildABike" />
       <item itemvalue="Groovy.ExpandoTesting" />
       <item itemvalue="Groovy.GroovyStrings" />
       <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
       <item itemvalue="Groovy.MetaTesting" />
       <item itemvalue="Maven.single test" />
+      <item itemvalue="Groovy.JsonParsing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Groovy.JsonParsing" />
         <item itemvalue="Groovy.MetaTesting" />
         <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
         <item itemvalue="Groovy.ExpandoTesting" />
         <item itemvalue="Groovy.GroovyStrings" />
-        <item itemvalue="Groovy.BuildABike" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +244,8 @@
       <workItem from="1644995970518" duration="5911000" />
       <workItem from="1645019010895" duration="6696000" />
       <workItem from="1645174978137" duration="17761000" />
-      <workItem from="1646208065034" duration="653000" />
+      <workItem from="1646208065034" duration="901000" />
+      <workItem from="1646211604959" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -350,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645366760317</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Playing">
+      <created>1646208950620</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1646208950620</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

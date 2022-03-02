@@ -1,7 +1,12 @@
 package mikew.anything
 
+import groovy.json.JsonGenerator
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
+
+import java.time.DayOfWeek
+import java.time.LocalDate
+import java.time.format.TextStyle
 
 def jsonStr = '''{ "products" : [
     {
@@ -49,3 +54,31 @@ assert [2, 3] == jsonParsed.products.collect {
     it.id
 }
 
+// ----------- parsing objects -----------
+
+class Zoid {
+    String xix
+    Integer pfz
+}
+
+def z1 = new Zoid( xix: 'Monday', pfz: 10 )
+println JsonOutput.prettyPrint( JsonOutput.toJson( z1 ) )
+
+// create a JsonGenerator with converter to customze the output
+def generator = new JsonGenerator.Options()
+        .addConverter( new JsonGenerator.Converter() {
+            @Override
+            boolean handles(Class<?> type) {
+                return Zoid.isAssignableFrom(type)
+            }
+
+            @Override
+            Object convert(Object value, String key) {
+                value.xix = DayOfWeek.valueOf(value.xix.toUpperCase()).plus(3).getDisplayName(TextStyle.FULL_STANDALONE, Locale.default)
+                value.pfz = value.pfz*2
+                value
+            }
+        })
+        .build()
+
+println JsonOutput.prettyPrint ( generator.toJson(z1) )
