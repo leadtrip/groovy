@@ -82,3 +82,24 @@ def generator = new JsonGenerator.Options()
         .build()
 
 println JsonOutput.prettyPrint ( generator.toJson(z1) )
+
+// ------------------------------------------------------------------------
+
+// parse JSON string & modify
+
+String newCardIsrn = 'newcardisrn'
+String newExternalId = 'RC00019673839'
+String jsonReqFromDb = '''{"scheme":{"abbreviation":"MT-WALRUS","link":"\\/schemes\\/9c5ce4ee-0f40-4cf7-beb0-4997620695bc"},"distributionDetails":{"locations":[{"reference":"location|Merseytravel - Fulfilment - Rail"}],"windowOfAvailability":{"start":"2022-03-10T14:06:28Z","period":"PT672H"}},"customer":{"link":"\\/customers\\/514259ae-ca30-4c4d-9528-c0bf2e191ec2"},"target":{"type":"CUSTOMER_MEDIA","reference":"633597014403808809","isITSO":true},"actions":[{"type":"ADD","variantExternalId":"catalogues\\/9ebc8d8b-f9a0-4c1b-9d75-1cecf5748c37\\/products\\/74\\/variants\\/0","attributes":{"AmountPaid":7500,"ValidityStartDTS":"2022-03-10T00:00:00Z","EXP":"2022-04-09","PartySizeAdult":1,"PartySizeChild":0}}],"externalId":"MW00019673839"}'''
+
+def fmsReqParsed = new JsonSlurper().parseText( jsonReqFromDb )
+
+assert fmsReqParsed.target.reference == '633597014403808809'
+assert fmsReqParsed.externalId == 'MW00019673839'
+
+fmsReqParsed.target.reference = newCardIsrn
+fmsReqParsed.externalId = "RC${fmsReqParsed.externalId.substring(2)}"
+
+assert fmsReqParsed.target.reference == newCardIsrn
+assert fmsReqParsed.externalId == newExternalId
+
+println JsonOutput.prettyPrint( JsonOutput.toJson( fmsReqParsed ) )

@@ -90,15 +90,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Groovy.JsonParsing">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,8 +187,8 @@
       <item itemvalue="Groovy.GroovyStrings" />
       <item itemvalue="Groovy.GroovyCompileTimeAnnotations" />
       <item itemvalue="Groovy.MetaTesting" />
-      <item itemvalue="Maven.single test" />
       <item itemvalue="Groovy.JsonParsing" />
+      <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
@@ -245,7 +243,8 @@
       <workItem from="1645019010895" duration="6696000" />
       <workItem from="1645174978137" duration="17761000" />
       <workItem from="1646208065034" duration="901000" />
-      <workItem from="1646211604959" duration="2235000" />
+      <workItem from="1646211604959" duration="2361000" />
+      <workItem from="1646995725226" duration="3195000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -359,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646208950620</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Playing">
+      <created>1646229720118</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1646229720118</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
