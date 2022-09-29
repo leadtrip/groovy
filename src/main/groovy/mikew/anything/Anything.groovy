@@ -1,12 +1,12 @@
-package mikew.anything
+//["powershell", "-Command", "Invoke-RestMethod -Headers @{Authorization = 'Bearer OTg...'} -Uri https://bitbucket.domain/repos/test/browse/base/test.txt?raw -OutFile test.txt"].execute();
 
-import java.time.Clock
-import java.time.LocalDate
-import java.time.Year
-import java.time.temporal.ChronoField
+//["powershell", "-Command", "Invoke-RestMethod -Uri https://jsonplaceholder.typicode.com/users/1 -OutFile test.txt"].execute();
 
-println Clock.systemDefaultZone()
-println LocalDate.now(Clock.systemDefaultZone()).get( ChronoField.YEAR )
-println Year.now(Clock.systemDefaultZone())
+def sout = new StringBuilder(), serr = new StringBuilder()
+def args = ["powershell", "-Command", "Invoke-RestMethod -Headers @{Authorization = 'Bearer OTg...'} -Uri https://bitbucket.domain/repos/test/browse/base/test.txt?raw -OutFile test.txt"]
+def proc = new ProcessBuilder( args )
+Process process = proc.start()
+process.consumeProcessOutput( sout, serr )
+process.waitForOrKill( 10000 )
+println serr
 
-println new Date().toYear()
