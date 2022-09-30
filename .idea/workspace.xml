@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_cli_commons_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_xml_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_3_0_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_dateutil_3_0_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73768991/question73768991.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spockframework_spock_core_2_2_groovy_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73906036/JsonFile.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73906036/TrackingFile.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/groovy/soquestions/q73906036/JsonFileSpec.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/groovy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groovy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/BasicGroovy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/BasicGroovy.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +88,7 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.BasicGroovy">
+  <component name="RunManager" selected="JUnit.JsonFileSpec">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -131,17 +133,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectFieldAccess" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/DirectFieldAccess.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="question73768991" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73768991/question73768991.groovy" />
@@ -149,6 +140,21 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73768991" />
       <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonFileSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groovy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="soquestions.q73906036.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="soquestions.q73906036" />
+      <option name="MAIN_CLASS_NAME" value="soquestions.q73906036.JsonFileSpec" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,16 +190,16 @@
       <item itemvalue="Groovy.Anything" />
       <item itemvalue="Groovy.question73768991" />
       <item itemvalue="Groovy.Anything (1)" />
-      <item itemvalue="Groovy.DirectFieldAccess" />
+      <item itemvalue="JUnit.JsonFileSpec" />
       <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JsonFileSpec" />
         <item itemvalue="Groovy.BasicGroovy" />
         <item itemvalue="Groovy.Anything" />
         <item itemvalue="Groovy.question73768991" />
         <item itemvalue="Groovy.Anything (1)" />
-        <item itemvalue="Groovy.DirectFieldAccess" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +259,8 @@
       <workItem from="1664193172225" duration="1823000" />
       <workItem from="1664266784897" duration="862000" />
       <workItem from="1664290695645" duration="484000" />
-      <workItem from="1664430987255" duration="751000" />
+      <workItem from="1664430987255" duration="820000" />
+      <workItem from="1664529916971" duration="2262000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -395,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658496067726</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Playing">
+      <created>1664431805439</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664431805439</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
