@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,9 +188,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Groovy.Closures" />
+        <item itemvalue="Groovy.Anything" />
         <item itemvalue="JUnit.JsonFileSpec" />
         <item itemvalue="Groovy.BasicGroovy" />
-        <item itemvalue="Groovy.Anything" />
         <item itemvalue="Groovy.question73768991" />
       </list>
     </recent_temporary>
@@ -255,6 +256,8 @@
       <workItem from="1665294290704" duration="6708000" />
       <workItem from="1665301065093" duration="74000" />
       <workItem from="1665301181103" duration="78000" />
+      <workItem from="1665301360095" duration="79000" />
+      <workItem from="1665307220198" duration="3810000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -410,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664537543026</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Playing">
+      <created>1665301412160</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665301412160</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

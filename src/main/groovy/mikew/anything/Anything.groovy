@@ -1,12 +1,26 @@
-//["powershell", "-Command", "Invoke-RestMethod -Headers @{Authorization = 'Bearer OTg...'} -Uri https://bitbucket.domain/repos/test/browse/base/test.txt?raw -OutFile test.txt"].execute();
+// Create closures
+def invokeClosure1 = { String name, Object args ->
+    name
+}
+def invokeClosure2 = { String suffix, String name, Object args ->
+    "${name}$suffix"
+}
+def invokeClosure2Curried = invokeClosure2.curry('!')
+assert invokeClosure2Curried.parameterTypes as List == [String, Object]
 
-//["powershell", "-Command", "Invoke-RestMethod -Uri https://jsonplaceholder.typicode.com/users/1 -OutFile test.txt"].execute();
+// Test closures
+assert invokeClosure1('foo', null) == 'foo'
+assert invokeClosure2Curried('foo', null) == 'foo!'
 
-def sout = new StringBuilder(), serr = new StringBuilder()
-def args = ["powershell", "-Command", "Invoke-RestMethod -Headers @{Authorization = 'Bearer OTg...'} -Uri https://bitbucket.domain/repos/test/browse/base/test.txt?raw -OutFile test.txt"]
-def proc = new ProcessBuilder( args )
-Process process = proc.start()
-process.consumeProcessOutput( sout, serr )
-process.waitForOrKill( 10000 )
-println serr
+// Create an object
+def s = 'Hello'
+assert s.toUpperCase() == 'HELLO'
+
+// Override instance metaclass invokeMethod with a regular closure
+s.metaClass.invokeMethod = invokeClosure1
+assert s.toUpperCase() == 'toUpperCase'
+
+// Override instance metaclass invokeMethod with a curried closure
+s.metaClass.invokeMethod = invokeClosure2Curried
+assert s.toUpperCase() == 'toUpperCase!'
 

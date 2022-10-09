@@ -177,3 +177,52 @@ try {
 catch (MissingPropertyException mpe) {
     // species is not defined on Lake
 }
+
+// Functional programming
+// currying, the concept of partial application, lets you set the value of one parameter of a closure & return a new closure accepting one less parameter
+// left currying
+def nCopies = { int n, String str -> str*n }                // closure expects 2 parameters
+def twice = nCopies.curry(2)                       // curry sets first parameter to 2 & returns new closure
+assert twice('bla') == 'blabla'                   // call the closure returned from currying which now only needs the one str parameter
+assert twice('bla') == nCopies(2, 'bla')    // effectively the same thing
+
+// right currying
+def blah = nCopies.rcurry('bla')                // rcurry sets last parameter to bla and returns new closure
+assert blah(2) == 'blabla'                     // call the closure returned from rcurry and pass single n parameter
+assert blah(2) == nCopies(2, 'bla')      // compare the call to the new and original closure
+
+// index based currying
+def layers = { top, middle, bottom -> "$top and $middle and $bottom" }      // 3 parameter closure
+def alwaysHam = layers.ncurry(0, 'ham')                                 // set parameter 0 to ham
+assert "ham and chips and beans" == alwaysHam('chips', 'beans')
+def alwaysHamAndChips = layers.ncurry(0, 'ham', 'chips')        // can also set multiple parameters
+assert "ham and chips and egg" == alwaysHamAndChips('egg')
+
+// memoization
+def sum = { int x, int y  ->        // non-memoized closure
+    println "sum ${x} + ${y}"
+    return x + y
+}
+// these calls will both print sum 3 + 4
+sum(3, 4)
+sum(3, 4)
+
+def sumMemoize = sum.memoize()      // memoized closure
+// only the first call will print
+sumMemoize(3, 4)
+sumMemoize(3, 4)
+
+def sumMemoizeTwice = sum.memoizeAtMost(3)      // caches at most 3 values, atLeast and between versions also available
+sumMemoizeTwice(5,6)
+sumMemoizeTwice(7,8)
+sumMemoizeTwice(9,10)
+
+sumMemoizeTwice(5,6)
+sumMemoizeTwice(7,8)
+sumMemoizeTwice(9,10)
+
+// method pointer, store a reference to a method in a variable to call it later
+def word = 'Cello'
+def upperWordFunc = word.&toUpperCase   // store reference to method in variable
+def upper = upperWordFunc()             // call like a method
+assert upper == word.toUpperCase()
