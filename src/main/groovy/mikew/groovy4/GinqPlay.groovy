@@ -2,6 +2,11 @@ package mikew.groovy4
 
 import groovy.json.JsonSlurper
 
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+import java.time.temporal.ChronoUnit
+
 // minimum query needs from and select
 def numbers = [0,1,2]
 assert [0, 1, 2] == GQ {
@@ -13,6 +18,16 @@ assert [10,12,14,16,18] == GQ{
     from n in [10,11,12,13,14,15,16,17,18]
     where n%2 == 0
     select n
+}.toList()
+
+assert [[1, 1], [2, 2], [2, 2], [3, 3], [3, 3], [3, 3], [4, 4], [4, 4], [4, 4], [4, 4]] == GQ {
+    from v in (
+        from n in [1, 4, 4, 3, 1, 2, 3, 1, 1, 4, 2, 3]
+        select distinct(n)
+    )
+    join m in [1, 2, 2, 3, 3, 3, 4, 4, 4, 4] on m == v
+    orderby v
+    select v, m
 }.toList()
 
 // JSON parsing
@@ -93,3 +108,31 @@ assert [['France', 18], ['Belgium', 11], ['Great Britain', 7]] == GQ {
     select c.country, sum(c.grandTourWins)
 }.toList()
 
+// object creation
+record HedgeHog(String name, LocalDateTime lastMeal){}
+
+def hhNames = ['Darlene', 'Bob', 'Malcolm', 'Sven', 'June']
+def hedgeHogs = GQ{
+    from n in hhNames
+    orderby n
+    select new HedgeHog(n, LocalDateTime.now().minusHours(++_rn))       // _rn is the row number, zero based
+}
+
+def isHungry = { h -> hoursAgo(h.lastMeal()) > 2 }
+
+// stream the results
+def hungryHedgehogs =
+        hedgeHogs.stream()
+        .peek(h-> System.out.println( "${h.name()}'s last meal was ${dateAndHoursAgo(h.lastMeal())}" ))
+        .filter( isHungry )
+        .toList()
+
+['June', 'Malcolm', 'Sven'] == hungryHedgehogs*.name()
+
+def dateAndHoursAgo(ldt) {
+    "${ldt.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))} [${hoursAgo(ldt)}]"
+}
+
+def hoursAgo(ldt) {
+    ChronoUnit.HOURS.between(ldt, LocalDateTime.now())
+}
