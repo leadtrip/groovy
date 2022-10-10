@@ -123,7 +123,7 @@ def solarSystem = new JsonSlurper().parseText(
         }
     ''')
 
-assert [['Earth', 1], ['Mars', 2], ['Uranus', 3], ['Jupiter', 4], ['Saturn', 5]] == GQ {
+assert [['Earth', 1], ['Mars', 2], ['Uranus', 3], ['Jupiter', 4], ['Saturn', 5]] == GQ {    // not factually accurate
     from p in solarSystem.planets
     join m in solarSystem.moons on p.id == m.planet
     groupby p.name
@@ -162,13 +162,13 @@ def isHungry = { h -> hoursAgo(h.lastMeal()) > 2 }
 // stream the results
 def hungryHedgehogs =
         hedgeHogs.stream()
-        .peek(h-> System.out.println( "${h.name()}'s last meal was ${dateAndHoursAgo(h.lastMeal())}" ))
+        .peek(h-> System.out.println( "${h.name()}'s last meal was ${lastMealDetails(h.lastMeal())}" ))
         .filter( isHungry )
         .toList()
 
 ['June', 'Malcolm', 'Sven'] == hungryHedgehogs*.name()
 
-def dateAndHoursAgo(ldt) {
+def lastMealDetails(ldt) {
     "${ldt.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))} [${hoursAgo(ldt)}]"
 }
 
