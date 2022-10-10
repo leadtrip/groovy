@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_macro_4_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_test_4_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/Cyclist.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/groovy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groovy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_cli_commons_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_cli_commons_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_json_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_json_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_sql_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_xml_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_test_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_ginq_4_0_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_xml_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_sql_4_0_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/groovy4.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/groovy4.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +92,7 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.Closures">
+  <component name="RunManager" selected="Groovy.GinqPlay">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -103,17 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicGroovy" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/BasicGroovy.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Closures" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" />
@@ -125,12 +126,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="question73768991" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="GinqPlay" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73768991/question73768991.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q73768991" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="groovy4" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4/groovy4.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,20 +190,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Groovy.GinqPlay" />
+      <item itemvalue="Groovy.groovy4" />
       <item itemvalue="Groovy.Closures" />
-      <item itemvalue="Groovy.BasicGroovy" />
       <item itemvalue="Groovy.Anything" />
-      <item itemvalue="Groovy.question73768991" />
       <item itemvalue="JUnit.JsonFileSpec" />
       <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Groovy.Closures" />
+        <item itemvalue="Groovy.GinqPlay" />
+        <item itemvalue="Groovy.groovy4" />
         <item itemvalue="Groovy.Anything" />
+        <item itemvalue="Groovy.Closures" />
         <item itemvalue="JUnit.JsonFileSpec" />
-        <item itemvalue="Groovy.BasicGroovy" />
-        <item itemvalue="Groovy.question73768991" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +269,9 @@
       <workItem from="1665301065093" duration="74000" />
       <workItem from="1665301181103" duration="78000" />
       <workItem from="1665301360095" duration="79000" />
-      <workItem from="1665307220198" duration="3810000" />
+      <workItem from="1665307220198" duration="4410000" />
+      <workItem from="1665318610494" duration="1113000" />
+      <workItem from="1665380610679" duration="8441000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -420,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665301412160</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Playing">
+      <created>1665311700631</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1665311700631</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

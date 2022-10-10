@@ -25,13 +25,18 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <groovy.version>4.0.1</groovy.version>
+        <groovy.version>4.0.5</groovy.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.groovy</groupId>
             <artifactId>groovy</artifactId>
+            <version>${groovy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy-ginq</artifactId>
             <version>${groovy.version}</version>
         </dependency>
         <dependency>
