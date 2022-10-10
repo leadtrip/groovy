@@ -20,15 +20,54 @@ assert [10,12,14,16,18] == GQ{
     select n
 }.toList()
 
-assert [[1, 1], [2, 2], [2, 2], [3, 3], [3, 3], [3, 3], [4, 4], [4, 4], [4, 4], [4, 4]] == GQ {
-    from v in (
-        from n in [1, 4, 4, 3, 1, 2, 3, 1, 1, 4, 2, 3]
-        select distinct(n)
-    )
-    join m in [1, 2, 2, 3, 3, 3, 4, 4, 4, 4] on m == v
-    orderby v
-    select v, m
+assert ['bob', 'roy'] == GQ {
+    from n in ['bob', 'dave', 'roy', 'owen']
+    where n.contains('o')
+    && n.length() < 4
+    select n
 }.toList()
+
+assert [1,2,3] == GQ {
+    from n in [1,1,3,2,3,3,1,3]
+    orderby n
+    select distinct(n)
+}.toList()
+
+
+// lag and lead
+assert [[2, 3], [1, 2], [3, null]] == GQ {
+    from n in [2, 1, 3]
+    select n, (lead(n) over(orderby n))         // get the row after (below) the current
+}.toList()
+
+assert [[2, 1], [1, null], [3, 2]] == GQ {
+    from n in [2, 1, 3]
+    select n, (lag(n) over(orderby n))          // get the row before (above) the current
+}.toList()
+
+def employees = new JsonSlurper().parseText(
+'''
+        {
+            "salaries": [
+               {"name": "Dave", "salary": 100000},         
+               {"name": "Claire", "salary": 105000},
+               {"name": "Tom", "salary": 20000},
+               {"name": "Wendy", "salary": 40000},
+               {"name": "Cliff", "salary": 200000},
+               {"name": "Ben", "salary": 310000}
+            ]
+        }
+    '''
+)
+
+// employees listed by salary & diff between them and next employee with larger salary
+assert [['Tom', 20000, -20000], ['Wendy', 40000, -60000], ['Dave', 100000, -5000], ['Claire', 105000, -95000], ['Cliff', 200000, -110000], ['Ben', 310000, 310000]] == GQ {
+    from s in employees.salaries
+    orderby s.salary
+    select s.name, s.salary,
+            s.salary - (lead(s.salary,1, 0) over(orderby s.salary)) as difference
+}.toList()
+
 
 // JSON parsing
 
