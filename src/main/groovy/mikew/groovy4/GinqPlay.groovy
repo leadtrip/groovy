@@ -33,16 +33,21 @@ assert [1,2,3] == GQ {
     select distinct(n)
 }.toList()
 
-
+// window functions
 // lag and lead
 assert [[2, 3], [1, 2], [3, null]] == GQ {
     from n in [2, 1, 3]
-    select n, (lead(n) over(orderby n))         // get the row after (below) the current
+    select n, (lead(n) over(orderby n))         // lead, get the row after (below) the current
+}.toList()
+
+assert [['a', 'b'], ['b', 'c'], ['c', null]] == GQ {
+    from c in ['a', 'b', 'c']
+    select c, (lead(c) over(orderby c))
 }.toList()
 
 assert [[2, 1], [1, null], [3, 2]] == GQ {
     from n in [2, 1, 3]
-    select n, (lag(n) over(orderby n))          // get the row before (above) the current
+    select n, (lag(n) over(orderby n))          // lag, get the row before (above) the current
 }.toList()
 
 def employees = new JsonSlurper().parseText(
@@ -148,7 +153,24 @@ assert [['France', 18], ['Belgium', 11], ['Great Britain', 7]] == GQ {
 }.toList()
 
 // object creation
-record HedgeHog(String name, LocalDateTime lastMeal){}
+record HedgeHog(String name, LocalDateTime lastMeal, int hoursTillHungry = 2 ){
+
+    def isHungry() {
+        hoursSinceLastMeal() > hoursTillHungry
+    }
+
+    def lastMealDetails() {
+        "${lastMeal.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))} [${hoursSinceLastMeal()}]"
+    }
+
+    long hoursSinceLastMeal() {
+        ChronoUnit.HOURS.between(lastMeal, LocalDateTime.now())
+    }
+
+    def logMeal() {
+        System.out.println( "${name}'s last meal was ${lastMealDetails()}" )
+    }
+}
 
 def hhNames = ['Darlene', 'Bob', 'Malcolm', 'Sven', 'June']
 def hedgeHogs = GQ{
@@ -157,21 +179,11 @@ def hedgeHogs = GQ{
     select new HedgeHog(n, LocalDateTime.now().minusHours(++_rn))       // _rn is the row number, zero based
 }
 
-def isHungry = { h -> hoursAgo(h.lastMeal()) > 2 }
-
 // stream the results
 def hungryHedgehogs =
         hedgeHogs.stream()
-        .peek(h-> System.out.println( "${h.name()}'s last meal was ${lastMealDetails(h.lastMeal())}" ))
-        .filter( isHungry )
+        .peek( HedgeHog::logMeal )
+        .filter( HedgeHog::isHungry )
         .toList()
 
 ['June', 'Malcolm', 'Sven'] == hungryHedgehogs*.name()
-
-def lastMealDetails(ldt) {
-    "${ldt.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))} [${hoursAgo(ldt)}]"
-}
-
-def hoursAgo(ldt) {
-    ChronoUnit.HOURS.between(ldt, LocalDateTime.now())
-}
