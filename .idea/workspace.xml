@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovycollections/GroovyCollectionsPlay.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74106620/question74106620.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/util/Fish.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" afterDir="false" />
     </list>
@@ -79,7 +82,7 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.GinqPlay">
+  <component name="RunManager" selected="Groovy.GroovyCollectionsPlay">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -102,23 +105,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Closures" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/Closures.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GinqPlay" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroovyCollectionsPlay" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovycollections/GroovyCollectionsPlay.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovycollections" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,17 +138,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonFileSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="question74106620" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="soquestions.q73906036.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="soquestions.q73906036" />
-      <option name="MAIN_CLASS_NAME" value="soquestions.q73906036.JsonFileSpec" />
-      <option name="TEST_OBJECT" value="class" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74106620/question74106620.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74106620" />
+      <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,20 +176,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Groovy.GroovyCollectionsPlay" />
+      <item itemvalue="Groovy.question74106620" />
       <item itemvalue="Groovy.GinqPlay" />
       <item itemvalue="Groovy.groovy4" />
-      <item itemvalue="Groovy.Closures" />
       <item itemvalue="Groovy.Anything" />
-      <item itemvalue="JUnit.JsonFileSpec" />
       <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Groovy.GroovyCollectionsPlay" />
+        <item itemvalue="Groovy.question74106620" />
         <item itemvalue="Groovy.GinqPlay" />
         <item itemvalue="Groovy.groovy4" />
         <item itemvalue="Groovy.Anything" />
-        <item itemvalue="Groovy.Closures" />
-        <item itemvalue="JUnit.JsonFileSpec" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +258,13 @@
       <workItem from="1665307220198" duration="4410000" />
       <workItem from="1665318610494" duration="1113000" />
       <workItem from="1665380610679" duration="24763000" />
-      <workItem from="1665467318040" duration="3316000" />
+      <workItem from="1665467318040" duration="3931000" />
+      <workItem from="1665575612222" duration="719000" />
+      <workItem from="1665591604698" duration="671000" />
+      <workItem from="1665732470279" duration="83000" />
+      <workItem from="1666094748952" duration="3275000" />
+      <workItem from="1666185286506" duration="7595000" />
+      <workItem from="1666247999629" duration="6471000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -457,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665419859166</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Playing">
+      <created>1665492168369</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1665492168369</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
