@@ -16,10 +16,10 @@ def sw = new StringWriter()
 def bldr = new MarkupBuilder(sw)
 
 bldr.root {
-    startingXml.each { aRt ->
+    startingXml.'*'.each { aRt ->
         row {
-            Key(aRt.FirstName)
-            Value(aRt.LastName)
+            Key(aRt.name())
+            Value(aRt.text())
         }
     }
 }
