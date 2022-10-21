@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovycollections/GroovyCollectionsPlay.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74106620/question74106620.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/util/Fish.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74138850/question74138850.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/groovy4/GinqPlay.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.GroovyCollectionsPlay">
+  <component name="RunManager" selected="Groovy.question74138850">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -90,17 +87,6 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Anything" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
-      <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy4" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="XmlCreating" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4/groovy4.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/XmlCreating.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/groovy4" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,6 +130,17 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74106620" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="question74138850" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74138850/question74138850.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/soquestions/q74138850" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,20 +173,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Groovy.XmlCreating" />
+      <item itemvalue="Groovy.question74138850" />
       <item itemvalue="Groovy.GroovyCollectionsPlay" />
       <item itemvalue="Groovy.question74106620" />
       <item itemvalue="Groovy.GinqPlay" />
-      <item itemvalue="Groovy.groovy4" />
-      <item itemvalue="Groovy.Anything" />
       <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Groovy.question74138850" />
+        <item itemvalue="Groovy.XmlCreating" />
         <item itemvalue="Groovy.GroovyCollectionsPlay" />
         <item itemvalue="Groovy.question74106620" />
         <item itemvalue="Groovy.GinqPlay" />
-        <item itemvalue="Groovy.groovy4" />
-        <item itemvalue="Groovy.Anything" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +261,8 @@
       <workItem from="1665732470279" duration="83000" />
       <workItem from="1666094748952" duration="3275000" />
       <workItem from="1666185286506" duration="7595000" />
-      <workItem from="1666247999629" duration="6471000" />
+      <workItem from="1666247999629" duration="6485000" />
+      <workItem from="1666330103628" duration="1189000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -469,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665492168369</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Playing">
+      <created>1666279097053</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1666279097053</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
