@@ -91,4 +91,17 @@ assert mostFishBornIn == 2022
 
 [[1], ['bob', 1], ['sue'], ['sue', 'bob'], ['bob'], ['sue', 'bob', 1], ['sue', 1]] == (['sue', 'bob', 1].subsequences())
 
-[[a, 1], [b, 1], ['a', 2], ['b', 2]] == [['a', 'b'],[ 1, 2]].combinations()
+[['a', 1], ['b', 1], ['a', 2], ['b', 2]] == [['a', 'b'],[ 1, 2]].combinations()
+
+// get all the duplicates, that is occurrences -1
+def startingList = [1,2,3,4,5,4,5,5,5,5,6,7,8,9,10,10,10]
+def duplicateEntries = startingList.countBy { it }
+        .findAll { it.value > 1 }
+        .collectMany { [it.key] * (it.value - 1) }
+assert duplicateEntries == [4, 5, 5, 5, 5, 10, 10]
+
+// get all letters that had duplicates
+def startingLetters = 'abakckaliajlkjfoiajdljsaljfeliajfdlajfda'.toList()
+def duplicateLetters= startingLetters.countBy {it}
+                    .findAll {it.value > 1}*.getKey()
+println duplicateLetters
