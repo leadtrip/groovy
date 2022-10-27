@@ -105,3 +105,21 @@ def startingLetters = 'abakckaliajlkjfoiajdljsaljfeliajfdlajfda'.toList()
 def duplicateLetters= startingLetters.countBy {it}
                     .findAll {it.value > 1}*.getKey()
 println duplicateLetters
+
+// collate
+def numList = [1,2,3,4,5,6,7,8,9,10]
+def collatedNumLists = numList.collate(5)
+assert [[1,2,3,4,5], [6,7,8,9,10]] == collatedNumLists
+
+def collatedNumListStep = numList.collate(5, 1, false)
+// we used false for keepRemainder above so only get lists of 5 elements otherwise we'd get ever decreasing sized lists down to 1 element of 10
+[[1, 2, 3, 4, 5], [2, 3, 4, 5, 6], [3, 4, 5, 6, 7], [4, 5, 6, 7, 8], [5, 6, 7, 8, 9], [6, 7, 8, 9, 10]] == collatedNumListStep
+
+// want only one 200
+def a = 400
+def b = 200
+def c = 400
+assert [a,b,c].countBy {it == 200}[true] == 1
+assert [a,b,c].count{it==200} == 1
+assert [a,b,c].groupBy {it}[200].size() == 1
+assert [a,b,c].sum() == 1000
