@@ -74,7 +74,7 @@ col9.offerLast("L")
 col9.offerLast("C")
 col9.offerLast("M")
 
-// 2 minutes in notepad++ with a macro saves parsing all that nonsense above
+// 2 minutes in notepad++ with a macro saves parsing some of the nonsense in the input file
 def arrDeq = [col1, col2, col3, col4, col5, col6, col7, col8, col9]
 
 input.each {aLine ->
@@ -82,17 +82,19 @@ input.each {aLine ->
         printIt(arrDeq)
         def numbers = aLine.replaceAll("\\s", "").split('move|from|to').collect{ if( it ) it.toInteger()}
 
-        def from = numbers[2] - 1
-        def to = numbers[3] - 1
-        def toMove = numbers[1]
+        numbers.removeAll([null])
+
+        def from = numbers[1] - 1
+        def to = numbers[2] - 1
+        def toMove = numbers[0]
 
         // Comment/uncomment Part 1 or 2 below to get answer
-        // Part 1
+        // ---- Part 1 ----
 /*        toMove.times {
             arrDeq[to].offerFirst(arrDeq[from].pollFirst())
         }*/
 
-        // Part 2
+        // ---- Part 2 ----
         def topN = []
         toMove.times {
             topN << arrDeq[from].pollFirst()
