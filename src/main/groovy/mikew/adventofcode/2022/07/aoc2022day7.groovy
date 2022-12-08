@@ -75,18 +75,19 @@ input.eachLine {aLine ->
     }
 }
 currentDir = currentDir.parentDirectories.first()
-currentDir.getCurrent()
 
-
+// ---- Part 1 ----
 def dirList = recursiveSize(currentDir, [], 100000)
 def sumOfAllDirs = dirList*.dirSize.sum()
 println 'Sum of all dirs < 100000: ' + sumOfAllDirs     // Part 1 answer = 1086293
 
+// -- Part 2 ----
 dirList = recursiveSize(currentDir, [], Long.MAX_VALUE)
 def rootDirSize = dirList[0].dirSize
 def requiredForUpdate = 30000000 - (70000000 - rootDirSize)
 def smallestBigEnoughDir = dirList*.dirSize.findAll{ it > requiredForUpdate }.sort()[0]
 println 'Smallest big enough directory: ' + smallestBigEnoughDir    // Part 2 answer = 366028
+
 
 List recursiveSize( DirectoryD7 directoryD7, List dirList, Long max ) {
     if ( directoryD7.dirSize <= max ) {
