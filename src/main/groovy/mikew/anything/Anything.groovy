@@ -1,12 +1,5 @@
-class Tank {
-    def foo = {
-        println "Owner is $owner"
-        def bar = { println "      Owner is " + owner }
-        bar()
-    }
-}
+def allBelow = [0, 3, 1, 1, 3, 6, 3, 4, 3, 4, 4, 6, 3, 2, 7, 7, 2, 1, 6, 6, 1, 1, 6, 1, 1, 4, 1, 2, 1, 1, 1, 2, 4, 2, 5, 7, 3, 4, 3, 4, 6, 1, 6, 1, 1, 1, 4, 2, 3, 5, 5, 1, 1, 0, 0, 0, 5, 0, 4, 2, 3, 3, 4, 4, 0, 4, 3, 1, 0, 4, 4]
 
+def res = allBelow.find { it >= 300 }
 
-def t = new Tank() ;
-t.foo()
-
+println res
