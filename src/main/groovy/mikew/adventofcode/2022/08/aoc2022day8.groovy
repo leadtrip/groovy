@@ -14,11 +14,8 @@ def outer = 392
 def getRowsAndCols() { 99 }
 
 List<Integer> matrix = []
-
-def idx = 1
 input.eachLine{ aLine ->
 	matrix << aLine.split("(?!^)").collect { it as Integer }
-	idx++
 }
 
 def total = outer
@@ -28,10 +25,10 @@ matrix.eachWithIndex { aRow, rowIdx ->
 		aRow.eachWithIndex { aVal, valIdx ->
 			if ( valIdx > 0 && valIdx < rowsAndCols-1 ) {
 				//println "--- Row $rowIdx Col $valIdx Val $aVal ----"
-				if ( !check( aVal as Integer, 'left', matrix, rowIdx, valIdx ) ||
-						!check( aVal as Integer, 'right', matrix, rowIdx, valIdx ) ||
-							!check( aVal as Integer, 'below', matrix, rowIdx, valIdx ) ||
-								!check( aVal as Integer, 'above', matrix, rowIdx, valIdx ) ) {
+				if ( !check( aVal , 'left', matrix, rowIdx, valIdx ) ||
+						!check( aVal, 'right', matrix, rowIdx, valIdx ) ||
+							!check( aVal, 'below', matrix, rowIdx, valIdx ) ||
+								!check( aVal, 'above', matrix, rowIdx, valIdx ) ) {
 					total++
 				}
 			}
@@ -49,22 +46,10 @@ def check( Integer treeHeight, String where, List<Integer> matrix, Integer rowId
 		case 'left':
 			return matrix[rowIdx].subList(0, startingCol).find{ it >= treeHeight }
 		case 'below':
-			Integer max = rowsAndCols-1
-			def range = new NumberRange(rowIdx+1, max)
-			def allBelow = []
-			range.each {
-				allBelow << matrix[it][startingCol]
-			}
-			return allBelow.find { it >= treeHeight }
+			return (rowIdx+1.. rowsAndCols-1).collect {matrix[it][startingCol] }.find { it >= treeHeight }
 		case 'right':
 			return matrix[rowIdx].subList(startingCol+1, rowsAndCols).find{ it >= treeHeight }
 		case 'above':
-
-			def range = new NumberRange(rowIdx-1, 0)
-			def allAbove = []
-			range.each {
-				allAbove << matrix[it][startingCol]
-			}
-			return allAbove.find { it >= treeHeight }
+			return (rowIdx-1.. 0).collect {matrix[it][startingCol] }.find { it >= treeHeight }
 	}
 }
