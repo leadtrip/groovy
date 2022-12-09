@@ -1,16 +1,7 @@
 def input = new File( "../resources/day8input.txt" ).text
 
-def testInput =
-				'30373\n' +
-				'25512\n' +
-				'65332\n' +
-				'33549\n' +
-				'35390'
-
-//def outer = 16
 def outer = 392
 
-//def rowsAndCols = 5
 def getRowsAndCols() { 99 }
 
 List<Integer> matrix = []
@@ -18,38 +9,46 @@ input.eachLine{ aLine ->
 	matrix << aLine.split("(?!^)").collect { it as Integer }
 }
 
-def total = outer
+def part1Total = outer
+def part2Total = 0
+
+def treeScore = { row, th ->
+	def tot = row.findIndexOf{ it >= th }
+	tot == -1 ? row.size() : tot + 1
+}
+
+def visibleTrees = { row, th ->
+	row.findAll( aTree -> aTree >= th )
+}
 
 matrix.eachWithIndex { aRow, rowIdx ->
 	if ( rowIdx > 0 && rowIdx < rowsAndCols-1 ) {
-		aRow.eachWithIndex { aVal, valIdx ->
+		aRow.eachWithIndex { treeHeight, valIdx ->
 			if ( valIdx > 0 && valIdx < rowsAndCols-1 ) {
-				//println "--- Row $rowIdx Col $valIdx Val $aVal ----"
-				if ( !check( aVal , 'left', matrix, rowIdx, valIdx ) ||
-						!check( aVal, 'right', matrix, rowIdx, valIdx ) ||
-							!check( aVal, 'below', matrix, rowIdx, valIdx ) ||
-								!check( aVal, 'above', matrix, rowIdx, valIdx ) ) {
-					total++
+
+				def left = matrix[rowIdx].subList(0, valIdx)
+				def down = matrix[rowIdx].subList(valIdx+1, rowsAndCols)
+				def right = (rowIdx+1.. rowsAndCols-1).collect {matrix[it][valIdx] }
+				def up = (rowIdx-1.. 0).collect {matrix[it][valIdx] }
+
+				if (!visibleTrees( left, treeHeight ) ||
+						!visibleTrees( up, treeHeight ) ||
+							!visibleTrees( right, treeHeight ) ||
+								!visibleTrees( down, treeHeight ) ) {
+					part1Total++
 				}
+
+				def newPart2 =
+					treeScore( left.reverse(), treeHeight ) *
+						treeScore( up, treeHeight ) *
+							treeScore( right, treeHeight ) *
+								treeScore( down, treeHeight )
+
+				part2Total = Integer.max( newPart2, part2Total )
 			}
 		}
 	}
 }
 
-println "Total: $total"		// 1688
-
-def check( Integer treeHeight, String where, List<Integer> matrix, Integer rowIdx, Integer startingCol ) {
-	if( treeHeight == 0 ) {
-		return 100
-	}
-	switch (where) {
-		case 'left':
-			return matrix[rowIdx].subList(0, startingCol).find{ it >= treeHeight }
-		case 'below':
-			return (rowIdx+1.. rowsAndCols-1).collect {matrix[it][startingCol] }.find { it >= treeHeight }
-		case 'right':
-			return matrix[rowIdx].subList(startingCol+1, rowsAndCols).find{ it >= treeHeight }
-		case 'above':
-			return (rowIdx-1.. 0).collect {matrix[it][startingCol] }.find { it >= treeHeight }
-	}
-}
+println "Part 1 total: $part1Total"		// Part 1 = 1688
+println "Part 2 total: $part2Total"		// Part 2 = 410400
