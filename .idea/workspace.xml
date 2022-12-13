@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/11/aoc2022day11.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10/aoc2022day10.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10/aoc2022day10.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/11/aoc2022day11.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/11/aoc2022day11.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +285,7 @@
       <workItem from="1670666061879" duration="4545000" />
       <workItem from="1670740754770" duration="6686000" />
       <workItem from="1670764193299" duration="10090000" />
-      <workItem from="1670822395359" duration="9695000" />
-    </task>
-    <task id="LOCAL-00001" summary="Playing">
-      <created>1643035084155</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1643035084155</updated>
+      <workItem from="1670822395359" duration="17983000" />
     </task>
     <task id="LOCAL-00002" summary="Playing">
       <created>1643108303019</created>
@@ -632,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670826839521</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Playing">
+      <created>1670918903264</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1670918903265</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
