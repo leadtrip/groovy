@@ -12,12 +12,21 @@ coords(head, tail)
 head.x = 2
 coords(head, tail)
 
+tail.x += Math.signum(head.x)
+tail.y += Math.signum(head.y)
+
+coords(head, tail)
+head.y++
+coords(head, tail)
+head.y++
+coords(head, tail)
+tail.x += Math.signum(head.x)
+tail.y += Math.signum(head.y)
+coords(head, tail)
+
 def coords( head, tail ) {
     println '-----'
     println "head: $head tail: $tail"
-    println Math.abs(head.x - tail.x)
-    println Math.abs(head.y - tail.y)
-
-    println Math.signum(head.x)
-    println Math.signum(head.y)
+    println "Next to each other on x axis? ${Math.abs(head.x - tail.x) > 1 ? 'no': 'yes'}"
+    println "Next to each other on y axis? ${Math.abs(head.y - tail.y) > 1 ? 'no': 'yes'}"
 }

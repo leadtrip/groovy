@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75089008-ec82-45a0-b81e-e844ca62d5e9" name="Changes" comment="Playing">
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/09/aoc2022day9.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10/aoc2022day10.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/resources/day10input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/resources/day9input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/11/aoc2022day11.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10/aoc2022day10.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10/aoc2022day10.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,24 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/m1k3w/IdeaProjects/groovy/src/main/groovy/mikew/adventofcode/2022/10&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "C:/Users/m1k3w/IdeaProjects/groovy/src/main/groovy/mikew/adventofcode/2022/11",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\m1k3w\IdeaProjects\groovy\src\main\groovy\mikew\adventofcode\2022\11" />
       <recent name="C:\Users\m1k3w\IdeaProjects\groovy\src\main\groovy\mikew\adventofcode\2022\10" />
       <recent name="C:\Users\m1k3w\IdeaProjects\groovy\src\main\groovy\mikew\adventofcode\2022\09" />
       <recent name="C:\Users\m1k3w\IdeaProjects\groovy\src\main\groovy\mikew\adventofcode\2022\07" />
       <recent name="C:\Users\m1k3w\IdeaProjects\groovy\src\main\groovy\mikew\adventofcode\2022\06" />
-      <recent name="C:\Users\m1k3w\IdeaProjects\groovy\src\main\groovy\mikew\adventofcode\2022\05" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\woodm3\IdeaProjects\groovy\src\main\groovy" />
@@ -87,7 +85,7 @@
       <recent name="anything" />
     </key>
   </component>
-  <component name="RunManager" selected="Groovy.aoc2022day9 (1)">
+  <component name="RunManager" selected="Groovy.aoc2022day11">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -99,9 +97,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Anything" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="MathStuff" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/Anything.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
@@ -110,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MathStuff" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="aoc2022day10 (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything/MathStuff.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10/aoc2022day10.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/anything" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/10" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,18 +130,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="aoc2022day9 (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="aoc2022day11" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/09/aoc2022day9.groovy" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/11/aoc2022day11.groovy" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/09" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/11" />
       <setting name="debug" value="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="aoc2022day9" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="aoc2022day9 (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="groovy" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/mikew/adventofcode/2022/09/aoc2022day9.groovy" />
       <setting name="vmparams" value="" />
@@ -182,19 +180,19 @@
     </configuration>
     <list>
       <item itemvalue="Groovy.MathStuff" />
+      <item itemvalue="Groovy.aoc2022day10 (1)" />
+      <item itemvalue="Groovy.aoc2022day11" />
       <item itemvalue="Groovy.aoc2022day9 (1)" />
       <item itemvalue="Groovy.aoc2022day10" />
-      <item itemvalue="Groovy.aoc2022day9" />
-      <item itemvalue="Groovy.Anything" />
       <item itemvalue="Maven.single test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Groovy.aoc2022day9 (1)" />
+        <item itemvalue="Groovy.aoc2022day11" />
+        <item itemvalue="Groovy.aoc2022day10 (1)" />
         <item itemvalue="Groovy.MathStuff" />
+        <item itemvalue="Groovy.aoc2022day9 (1)" />
         <item itemvalue="Groovy.aoc2022day10" />
-        <item itemvalue="Groovy.aoc2022day9" />
-        <item itemvalue="Groovy.Anything" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +287,7 @@
       <workItem from="1670666061879" duration="4545000" />
       <workItem from="1670740754770" duration="6686000" />
       <workItem from="1670764193299" duration="10090000" />
-      <workItem from="1670822395359" duration="4429000" />
+      <workItem from="1670822395359" duration="9695000" />
     </task>
     <task id="LOCAL-00001" summary="Playing">
       <created>1643035084155</created>
@@ -627,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670615035290</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Playing">
+      <created>1670826839521</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1670826839521</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

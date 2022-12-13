@@ -148,38 +148,24 @@ def testInput =
          'noop',
          'noop']
 
-// this was fine until final 220 check
-/*def x = 1
-def toProcess = new ArrayDeque()
-
-for( String aLine : testInput ) {
-    if ( aLine.trim().startsWith( 'add') ) {
-        toProcess.offerLast(0)
-        toProcess.offerLast( aLine.split( ' ' )[1] as Integer )
-    }
-    else {
-        toProcess.offerLast(0)
-    }
-}*/
-
-def myx = 1
-def mycycle = 1
-def mytotal = 0
+def x = 1
+def cycle = 1
+def total = 0
 
 for( String aLine : input ) {
-    if ( mycycle % 40 == 20 ) {
-        mytotal += mycycle * myx
+    if ( cycle % 40 == 20 ) {
+        total += cycle * x
     }
-    mycycle++
+    cycle++
 
     if ( aLine.trim().startsWith( 'add') ) {
-        if ( mycycle % 40 == 20 ) {
-            mytotal += mycycle * myx
+        if ( cycle % 40 == 20 ) {
+            total += cycle * x
         }
         def add = aLine.split( ' ' )[1] as Integer
-        myx += add
-        mycycle++
+        x += add
+        cycle++
     }
 }
 
-println "Part 1: $mytotal"
+println "Part 1: $total"
