@@ -1,9 +1,6 @@
 package mikew.adventOfCode._2022._12;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.NoSuchElementException;
-import java.util.Queue;
+import java.util.*;
 
 class Aoc2022day12 {
 
@@ -56,9 +53,27 @@ class Aoc2022day12 {
 
     public static void main(String[] args) {
         Aoc2022day12 aoc2022day12 = new Aoc2022day12();
-        var nodeMatrix = aoc2022day12.nodeMatrix(REAL_INPUT);
-        var findShortestPathNode = aoc2022day12.findShortestPathNode(nodeMatrix, END, START);
-        System.out.println("Shortest distance: " + findShortestPathNode.distance );
+        aoc2022day12.part1();   // 412
+        aoc2022day12.part2();   // 402
+    }
+
+    private void part1() {
+        var matrix = nodeMatrix(REAL_INPUT);
+        Node start = findTargetNode(END, matrix);
+        Node end = findTargetNode(START, matrix);
+        var findShortestPathNode = findShortestPath(matrix, start, end);
+        System.out.println("Shortest distance: " + findShortestPathNode);
+
+    }
+
+    private void part2() {
+        var shortest = Arrays.stream( nodeMatrix(REAL_INPUT))
+                .flatMap(r -> Arrays.stream(r).filter(n -> n.value == 'a'))
+                .map( node -> findShortestPath( nodeMatrix(REAL_INPUT), findTargetNode(END, nodeMatrix(REAL_INPUT)), node ) )
+                .filter( integer -> integer != -1 )
+                .min(Comparator.naturalOrder()).orElse(Integer.MIN_VALUE);
+
+        System.out.println("Shortest distance from any a: " + shortest );
     }
 
     /**
@@ -75,46 +90,38 @@ class Aoc2022day12 {
         return nm;
     }
 
-    private Node findShortestPathNode(Node[][] matrix, char startValue, char endValue) {
-        Node start = findTargetNode(startValue, matrix);
-        Node end = findTargetNode(endValue, matrix);
-
-        System.out.println("start: " + start.row + "," + start.col + " - end: " + end.row + "," + end.col);
-
-        start.prevNode = start;
+    private int findShortestPath(Node[][] matrix, Node start, Node end) {
+        start.prevNode = start; // assign prev node same as start node to get going
         Queue<Node> q = new ArrayDeque<>();
         q.add(start);
 
+        int[][] distance = new int[matrix.length][matrix[0].length];
+        for (int[] r : distance) {
+            Arrays.fill(r, -1);
+        }
+
         while (!q.isEmpty()) {
             Node thisNode = q.poll();
-
-            int tr = thisNode.row;
-            int tc = thisNode.col;
 
             if (thisNode.visited) {
                 continue;
             }
 
-            if (endValue == thisNode.value) {
-                return thisNode;
-            }
-
-            Node prevNode = thisNode.prevNode;
-            int newHeight = thisNode.value;
-            int oldHeight = prevNode.value;
-            if (!(newHeight >= oldHeight - 1)) {
+            if (!thisNode.canMove()) {
                 continue;
             }
 
+            distance[thisNode.row][thisNode.col] = thisNode.distance;
+
             thisNode.visited = true;
 
-            addNode(q, matrix, tr + 1, tc, thisNode);   // above
-            addNode(q, matrix, tr - 1, tc, thisNode);   // below
-            addNode(q, matrix, tr, tc + 1, thisNode);   // right
-            addNode(q, matrix, tr, tc - 1, thisNode);   // left
+            addNode(q, matrix, thisNode.row + 1, thisNode.col, thisNode);   // above
+            addNode(q, matrix, thisNode.row - 1, thisNode.col, thisNode);   // below
+            addNode(q, matrix, thisNode.row, thisNode.col + 1, thisNode);   // right
+            addNode(q, matrix, thisNode.row, thisNode.col - 1, thisNode);   // left
         }
 
-        return null;
+        return distance[end.row][end.col];
     }
 
     /**
@@ -142,6 +149,13 @@ class Aoc2022day12 {
                 .orElseThrow(NoSuchElementException::new);
     }
 
+    static Node findNodeByCoords( int r, int c, Node[][] matrix ) {
+        return Arrays.stream(matrix)
+                .flatMap(row -> Arrays.stream(row).filter(n -> n.row == r && n.col == c))
+                .findFirst()
+                .orElseThrow(NoSuchElementException::new);
+    }
+
     class Node {
         int row;
         int col;
@@ -157,6 +171,20 @@ class Aoc2022day12 {
             this.distance = 0;
         }
 
+        Integer getDistance() {
+            return distance;
+        }
+
+        int actualValue() {
+            return value == 'S' ? 'a' : value == 'E' ? 'z' : value;
+        }
+
+        boolean canMove() {
+            int newHeight = actualValue();
+            int oldHeight = prevNode.actualValue();
+            return newHeight >= oldHeight - 1;
+        }
+
         @Override
         public String toString() {
             return "Node{" +
@@ -165,6 +193,19 @@ class Aoc2022day12 {
                     ", value=" + value +
                     ", distance=" + distance +
                     '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return row == node.row && col == node.col;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(row, col);
         }
     }
 }

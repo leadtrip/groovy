@@ -84,7 +84,7 @@ public class MikeBfs {
         var justFindWithRulesNode = mikeBfs.justFindWithRulesNode( mikeBfs.nodeMatrix(input), START, END  );
         System.out.println( "Just find with rules node result: " + justFindWithRulesNode );
 
-        var findShortestPathNode = mikeBfs.findShortestPathNode( mikeBfs.nodeMatrix(input), END, START );
+        var findShortestPathNode = mikeBfs.findShortestPathNode( mikeBfs.nodeMatrix(input), END, START );   // work backwards from end to start
         System.out.println( "Shortest distance with node result: " + findShortestPathNode );
     }
 
