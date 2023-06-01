@@ -1,5 +1,12 @@
-def nums = [1,2,3,4,2,1,2]
+package mikew.anything
 
-def res = nums.takeWhile {it < 3}
+import java.time.Clock
+import java.time.LocalDate
+import java.time.Year
+import java.time.temporal.ChronoField
 
-println res
+println Clock.systemDefaultZone()
+println LocalDate.now(Clock.systemDefaultZone()).get( ChronoField.YEAR )
+println Year.now(Clock.systemDefaultZone())
+
+println new Date().toYear()
