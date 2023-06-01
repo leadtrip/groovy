@@ -48,7 +48,7 @@ println switch(i) {
         throw new IllegalStateException('unknown number')
 }
 
-// exhaustiveness is not mandated by groovy unlike java, a default clause is returning null is implicitly added if not specified
+// exhaustiveness is not mandated by groovy unlike java, a default clause returning null is implicitly added if not specified
 // you should add one if null is not suitable e.g. for primitive types to avoid classcast exceptions or null pointers
 def s = 'deux'
 println switch(s) {
@@ -73,11 +73,11 @@ class MountainBike implements Bicycle {
     boolean jump() { true }
 }
 
-record Cyclist(String firstName, String surname, Integer grandTourWins = 0) {}
+//record Cyclist(String firstName, String surname, Integer grandTourWins = 0) {}
 
-def mikeWood = new Cyclist( 'Mike', 'Wood' )
-def chrisFroome = new Cyclist( 'Chris', 'Froome', 7 )
-def eddyMerckx = new Cyclist( 'Eddie', 'Merckx', 11 )
+def mikeWood = new Cyclist( 'Mike', 'Wood', 'Great Britain' )
+def chrisFroome = new Cyclist( 'Chris', 'Froome', 'Great Britain', 7 )
+def eddyMerckx = new Cyclist( 'Eddie', 'Merckx', 'Belgium', 11 )
 
 def grandTourWinners =
     [mikeWood, chrisFroome, eddyMerckx].stream()

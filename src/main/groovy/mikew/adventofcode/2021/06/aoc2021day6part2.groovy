@@ -1,5 +1,3 @@
-import java.util.stream.Collectors
-
 def input = new File( "../resources/day6input.txt" ).eachLine{it.split ( ',' ) }.collect { it.toInteger()}
 
 def ageList = (0..8).collect{ day -> input.findAll{ age -> age == day }.size() }

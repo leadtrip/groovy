@@ -116,3 +116,16 @@ assert alphabetList[3] == 'D'
 def removeFromList = alphabetList.&remove
 removeFromList 0
 assert alphabetList == ['B', 'C', 'D']
+
+def bi = BigInteger.&new
+def eight = bi '8'
+assert eight == 8
+
+// Method pointers are bound by the receiver and a method name.
+// Arguments are resolved at runtime, meaning that if you have multiple methods with the same name, the syntax is not different,
+// only resolution of the appropriate method to be called will be done at runtime
+def doThat(String s) { s.reverse() }
+def doThat(Integer i) { Integer.toBinaryString(i) }
+def doThatRef = this.&doThat
+assert 'unreversed' == doThatRef('desrevernu')
+assert '11111111' == doThatRef(255)
