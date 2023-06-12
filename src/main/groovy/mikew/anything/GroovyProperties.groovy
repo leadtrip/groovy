@@ -24,7 +24,12 @@ me.forename = 'Mike'
 me.setSurname( 'Wood' )
 me['dob'] = LocalDate.of(1975, 4, 10)
 
-println me['forename']
+// various ways to get a property
+println me['forename']      // map based
+println me.getForename()    // auto generated getter
+println me.forename         // this is also using auto generated getter even though it looks like direct field access
+println me.@forename        // this is direct field access
+
 println me.getProperty( 'surname' )
 println me.dob
 println me['dob']['year']
